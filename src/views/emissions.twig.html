@@ -36,7 +36,7 @@
   			<a href="{{ path('emissions', { type: show.type }) }}">{{ show.type }}</a>
 			<a href="{{ path('emission', { id: show.id, type: show.typeSlug }) }}">{{ show.number }}</a>
 			:
-			<a href="{{ path('emissions', { authors: show.authors }) }}">{{ show.authors }}</a>
+			<a href="{{ path('emissions', { artist: show.authors }) }}">{{ show.authors }}</a>
 			-
 			<a href="{{ path('emission', { id: show.id, type: show.typeSlug }) }}">{{ show.title }}</a>
 		</li>
