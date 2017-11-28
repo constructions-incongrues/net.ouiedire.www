@@ -33,10 +33,13 @@
 		<ul>
 	{% endif %}
   		<li class="{{ show.typeSlug }}">
-  			<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}">
-  				{{ show.type }} {{ show.number }} : {{ show.authors }} - {{ show.title }}
-  			</a>
-  		</li>
+  			<a href="{{ path('emissions', { type: show.type }) }}">{{ show.type }}</a>
+			<a href="{{ path('emission', { id: show.id, type: show.typeSlug }) }}">{{ show.number }}</a>
+			:
+			<a href="{{ path('emissions', { authors: show.authors }) }}">{{ show.authors }}</a>
+			-
+			<a href="{{ path('emission', { id: show.id, type: show.typeSlug }) }}">{{ show.title }}</a>
+		</li>
 {% endfor %}
 		</ul>
 	</div><!-- grid-50 -->

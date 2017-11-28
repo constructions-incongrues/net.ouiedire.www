@@ -134,9 +134,9 @@ function getShow($id, Silex\Application $app = null, $config = array()) {
 
     // Parse manifest data and infer show attributes
     $manifest = json_decode(file_get_contents($fileManifest->getRealPath()));
-    $show['authors'] = $manifest->authors;
+    $show['authors'] = trim($manifest->authors);
     $show['releasedAt'] = $manifest->releasedAt;
-    $show['title'] = $manifest->title;
+    $show['title'] = trim($manifest->title);
     $show['isPublic'] = $manifest->isPublic;
 
     // Pretty show type
