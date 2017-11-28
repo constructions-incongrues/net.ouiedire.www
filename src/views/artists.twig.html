@@ -10,7 +10,21 @@
 
 {% block content %}
 <div class="grid-100 mobile-grid-100">
-    <h3> {{ artists|length }} artistes / <a href="{{ url('emissions') }}">{{ shows|length }} émissions / {{ djs|length }} djs</a> </h3>
+<h3>
+	{% if app.request.get('type') %}
+		<a href="{{ path('artists', { type: app.request.get('type') }) }}">{{ artists|length }} artistes</a>
+		/ <a href="{{ path('emissions', { type: app.request.get('type') }) }}">{{ shows|length }} émissions</a>
+		/ <a href="{{ path('djs', { type: app.request.get('type') }) }}">{{ djs|length }} djs</a>
+	{% elseif app.request.get('authors') %}
+		<a href="{{ path('artists', { authors: app.request.get('authors') }) }}">{{ artists|length }} artistes</a>
+		/ <a href="{{ path('emissions', { authors: app.request.get('authors') }) }}">{{ shows|length }} émissions</a>
+		/ <a href="{{ path('djs', { authors: app.request.get('authors') }) }}">{{ djs|length }} djs</a>
+	{% else%}
+		<a href="{{ path('artists') }}">{{ artists|length }} artistes</a>
+		/ <a href="{{ path('emissions') }}">{{ shows|length }} émissions</a>
+		/ <a href="{{ path('djs') }}">{{ djs|length }} djs</a>
+	{% endif %}
+</h3>
     <dl>
     {% for letter, artists in artistsGroupedByAlpha %}
         <dt><a href="#{{ letter }}" name="{{ letter }}"><strong>{{ letter }}</strong></a></dt>

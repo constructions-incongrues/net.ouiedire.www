@@ -84,16 +84,16 @@
 		<div class="grid-70 mobile-grid-100">
 
 
-	
+
 			<h3>La dernière émission : </h3>
 			<h4>
 				{% block latest %}
 				LATEST SHOW
 				{% endblock %}
 			</h4>
-			 
+
 			 {% block flyer %}
-			
+
 			 {% endblock %}
 
 
@@ -140,7 +140,6 @@
 	<script src="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelement-and-player.min.js"></script>
 	<script src="{{ app.request.getBasePath() }}/vendor/net.constructions-incongrues.mejs/src/mep-feature-smartplaylist.js?{{ app.assetsVersion }}"></script>
 	<script src="{{ app.request.getBasePath() }}/vendor/net.constructions-incongrues.mejs/src/mep-feature-autochange.js?{{ app.assetsVersion }}"></script>
-	<script src="{{ app.request.getBasePath() }}/assets/javascripts/mep-feature-ouiedire.js?{{ app.assetsVersion }}"></script>
 	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelementplayer.css" /></link>
 	<script src="{{ app.request.getBasePath() }}/assets/javascripts/behaviors.js?{{ app.assetsVersion }}"></script>
 </body>

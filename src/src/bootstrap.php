@@ -60,19 +60,22 @@ function slugify($text)
  */
 function getArtists(array $show)
 {
-    $artists = array();
+    $artists = [];
 
     // Parse show playlist
     $crawler = new Crawler();
     $crawler->addContent('<html><meta charset="utf-8" />'.$show['playlist']);
-    $domArtists = $crawler->filter('.mejs-smartplaylist-time + span');
+    $filter = '.mejs-smartplaylist-time + span';
+    if ($show['type'] == 'Ouïedire') {
+        $filter = 'ol.number li a';
+    }
+    $domArtists = $crawler->filter($filter);
     foreach ($domArtists as $domArtist) {
         $artist = strtolower(trim($domArtist->textContent));
         if (!empty($artist)) {
             $artists[] = strtolower(trim($domArtist->textContent));
         }
     }
-
     $artists = array_unique($artists);
     sort($artists);
 
@@ -81,7 +84,7 @@ function getArtists(array $show)
 
 function getDjs(array $shows)
 {
-    $djs = array();
+    $djs = [];
     foreach ($shows as $show) {
         $djs[] = $show['authors'];
     }
@@ -101,7 +104,7 @@ function getDjs(array $shows)
  *
  * @throws \RuntimeException When a show data file could not be loaded
  */
-function getShow($id, Silex\Application $app = null, $config = array()) {
+function getShow($id, Silex\Application $app = null, $config = []) {
     // Defaults
     $config = array_merge(array('assets_version' => time(), 'cdn_url' => ''));
 
@@ -178,7 +181,7 @@ function getShow($id, Silex\Application $app = null, $config = array()) {
     }
 
     // Guess covers URL
-    $show['covers'] = array();
+    $show['covers'] = [];
     $finder = new Finder();
     try {
         $covers = $finder
@@ -216,7 +219,7 @@ function getShow($id, Silex\Application $app = null, $config = array()) {
  *
  * @return array Shows (as returned by getShow())
  */
-function getShows(Silex\Application $app, $preview = false, $artist = null) {
+function getShows(Silex\Application $app, $preview = false, $authors = null, $type = null) {
     // Path to data directories
     $pathData = __DIR__.'/../data';
 
@@ -238,16 +241,22 @@ function getShows(Silex\Application $app, $preview = false, $artist = null) {
             return $dateA > $dateB;
         });
 
-    if ($artist !== null) {
-        $finder->filter(function(\SplFileInfo $file) use ($artist) {
-            return json_decode($file->getContents(), true)['authors'] === $artist;
+    if ($authors !== null) {
+        $finder->filter(function(\SplFileInfo $file) use ($authors) {
+            return json_decode($file->getContents(), true)['authors'] === $authors;
+        });
+    }
+
+    if ($type !== null) {
+        $finder->filter(function(\SplFileInfo $file) use ($type) {
+            return json_decode($file->getContents(), true)['type'] === $type;
         });
     }
 
     $manifests = $finder->in(sprintf('%s/emission/', $pathData));
 
     // Parse manifests
-    $shows = array();
+    $shows = [];
     foreach ($manifests as $manifest) {
         try {
             // In not in preview mode, only return public shows
@@ -340,8 +349,13 @@ $app->get('/liens', function(Silex\Application $app) {
 
 // Shows list
 $app->get('/', function(Silex\Application $app, Request $request) use ($config) {
-    $artists = array();
-    $shows = getShows($app, array_key_exists('preview', $_GET), $request->query->get('artist'));
+    $artists = [];
+    $shows = getShows(
+        $app,
+        array_key_exists('preview', $_GET),
+        $request->query->get('authors'),
+        $request->query->get('type')
+    );
     foreach ($shows as $show) {
         $showArtists = getArtists($show);
         $artists = array_merge($artists, $showArtists);
@@ -357,7 +371,7 @@ $app->get('/', function(Silex\Application $app, Request $request) use ($config) 
             'shows'      => $shows,
             'djs'        => getDjs($shows),
             'randomShow' => $shows[array_rand($shows)],
-            'artist'     => $request->query->get('artist')
+            'authors'     => $request->query->get('authors')
           )
     );
 })
@@ -387,8 +401,8 @@ $app->get('/feed', function(Silex\Application $app) {
     $feed = new Feed();
     $feed->setTitle("Ouïedire, j'en ai déjà entendu parler quelque part");
     $feed->setDescription("Ouïedire est une web-radio à but non lucratif née en 2005. Elle a pour but de diffuser des émissions de musique en tout genre.");
-    $feed->setLink($app['url_generator']->generate('emissions', array(), UrlGenerator::ABSOLUTE_URL));
-    $feed->setFeedLink($app['url_generator']->generate('feed', array(), UrlGenerator::ABSOLUTE_URL), 'rss');
+    $feed->setLink($app['url_generator']->generate('emissions', [], UrlGenerator::ABSOLUTE_URL));
+    $feed->setFeedLink($app['url_generator']->generate('feed', [], UrlGenerator::ABSOLUTE_URL), 'rss');
     $feed->addAuthor(array('name' => 'Ouïedire', 'email' => 'contact@ouiedire.net', 'uri', 'http://www.ouiedire.net'));
     $feed->setDateModified(DateTime::createFromFormat('Y-m-d H:i:s', $shows[0]['releasedAt']));
 
@@ -423,7 +437,7 @@ EOT;
         $entry->setTitle(sprintf('%s #%s : %s par %s', $show['type'], $show['number'], $show['title'], $show['authors']));
         $entry->setLink($app['url_generator']->generate('emission', array('id' => $show['id'], 'type' => $show['typeSlug']), UrlGenerator::ABSOLUTE_URL));
         if ($show['description']) {
-          $entry->setDescription($show['description']);
+            $entry->setDescription($show['description']);
         }
         $entry->setContent($htmlContent);
         $entry->addAuthor(array('name' => $show['authors']));
@@ -444,7 +458,7 @@ $app->get('/oembed', function(Silex\Application $app) {
     // Fetch show
     try {
         $url = $app['request']->get('url');
-        $matches = array();
+        $matches = [];
         preg_match('/^.*(ouiedire|ailleurs)-(\d+)$/', $url, $matches);
         $show = getShow("$matches[1]-$matches[2]", $app);
     } catch (\RuntimeException $e) {
@@ -557,9 +571,14 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, Request $req
 ->bind('emission');
 
 $app->get('/artists', function(Silex\Application $app, Request $request) use ($config) {
-    $shows = getShows($app, array_key_exists('preview', $_GET), $request->query->get('artist'));
-    $artists = array();
-    $showsGroupedByArtist = array();
+    $shows = getShows(
+        $app,
+        array_key_exists('preview', $_GET),
+        $request->query->get('authors'),
+        $request->query->get('type')
+    );
+    $artists = [];
+    $showsGroupedByArtist = [];
     foreach ($shows as $show) {
         $showArtists = getArtists($show);
         $artists = array_merge($artists, $showArtists);
@@ -573,7 +592,7 @@ $app->get('/artists', function(Silex\Application $app, Request $request) use ($c
     }
 
     // Group alphabeticaly
-    $artistsGroupedByAlpha = array();
+    $artistsGroupedByAlpha = [];
     foreach ($artists as $artist) {
         $artistsGroupedByAlpha[strtolower(substr($artist, 0, 1))][] = $artist;
     }
@@ -591,6 +610,38 @@ $app->get('/artists', function(Silex\Application $app, Request $request) use ($c
     );
 })
 ->bind('artists');
+
+$app->get('/djs', function(Silex\Application $app, Request $request) use ($config) {
+    // Get shows for query
+    $shows = getShows(
+        $app,
+        array_key_exists('preview', $_GET),
+        $request->query->get('authors'),
+        $request->query->get('type')
+    );
+
+    $showsByAuthors = [];
+    $artists = [];
+    foreach ($shows as $show) {
+        // Gather artists
+        $showArtists = getArtists($show);
+        $artists = array_merge($artists, $showArtists);
+        $artists = array_unique($artists);
+
+        $showsByAuthors[$show['authors']][] = $show;
+    }
+    ksort($showsByAuthors);
+
+    $djs = array_keys($showsByAuthors);
+    sort($djs);
+
+    // Render view
+    return $app['twig']->render(
+        'djs.twig.html',
+        ['artists' => $artists, 'djs' => $djs, 'shows' => $shows, 'showsByAuthors' => $showsByAuthors]
+    );
+})
+->bind('djs');
 
 // Dons
 $app->get('/dons', function(Silex\Application $app) {

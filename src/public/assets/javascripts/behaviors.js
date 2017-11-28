@@ -8,7 +8,7 @@ $(document).ready(function() {
   $('audio').mediaelementplayer(
     {
       // Enabled features
-      features: ['playpause','progress','current','duration','tracks','volume','smartplaylist', 'googleanalytics', 'autochange', 'ouiedire'],
+      features: ['playpause', 'progress', 'current', 'duration', 'tracks', 'smartplaylist', 'googleanalytics', 'autochange'],
 
       // Player size
       audioWidth: '100%',
@@ -36,7 +36,7 @@ $(document).ready(function() {
       // Google Analytics integration
       googleAnalyticsTitle: 'Ouïedire.net',
       googleAnalyticsCategory: 'Émissions',
-      
+
       // Autochange configuration
       autochangeSelectorNextLink: 'a.previous',
       autochangeQueryString: 'play',

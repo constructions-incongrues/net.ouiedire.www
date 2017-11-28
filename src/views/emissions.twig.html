@@ -3,7 +3,7 @@
 {% block title %}Les émissions{% endblock %}
 
 {% block latest %}
-<a href="{{ path('emission', {id:shows.0.id, type:shows.0.typeSlug}) }}">
+<a href="{{ path('emission', { id: shows.0.id, type: shows.0.typeSlug }) }}">
   {{ shows.0.type }} {{ shows.0.number }} : {{ shows.0.authors }} - {{ shows.0.title }}
 </a>
 {% endblock %}
@@ -18,12 +18,23 @@
 	<a href="{{ url('flyers') }}">Flyers des programmations (Janvier 2015 à Juin 2016)</a>
 
 </nav>
-<h3><a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes</a> / {{ shows|length }} émissions / {{ djs|length }} djs / </h3>
+<h3>
+	{% if app.request.get('type') %}
+		<a href="{{ path('artists', { type: app.request.get('type') }) }}">{{ artists|length }} artistes</a>
+		/ <a href="{{ path('emissions', { type: app.request.get('type') }) }}">{{ shows|length }} émissions</a>
+		/ <a href="{{ path('djs', { type: app.request.get('type') }) }}">{{ djs|length }} djs</a>
+	{% elseif app.request.get('authors') %}
+		<a href="{{ path('artists', { authors: app.request.get('authors') }) }}">{{ artists|length }} artistes</a>
+		/ <a href="{{ path('emissions', { authors: app.request.get('authors') }) }}">{{ shows|length }} émissions</a>
+		/ <a href="{{ path('djs', { authors: app.request.get('authors') }) }}">{{ djs|length }} djs</a>
+	{% else%}
+		<a href="{{ path('artists') }}">{{ artists|length }} artistes</a>
+		/ <a href="{{ path('emissions') }}">{{ shows|length }} émissions</a>
+		/ <a href="{{ path('djs') }}">{{ djs|length }} djs</a>
+	{% endif %}
+</h3>
 
-
-<!-- <h5><a href="{{ path('emission', {id:randomShow.id, type:randomShow.typeSlug}) }}">Écouter de manière aléatoire</a></h5>
-<hr>
- --><div class="grid-50 mobile-grid-100">
+<div class="grid-50 mobile-grid-100">
 		<ul>
 {% for show in shows %}
 	{% if loop.index0 == (loop.length / 2)|number_format %}
@@ -36,7 +47,7 @@
   			<a href="{{ path('emissions', { type: show.type }) }}">{{ show.type }}</a>
 			<a href="{{ path('emission', { id: show.id, type: show.typeSlug }) }}">{{ show.number }}</a>
 			:
-			<a href="{{ path('emissions', { artist: show.authors }) }}">{{ show.authors }}</a>
+			<a href="{{ path('emissions', { authors: show.authors }) }}">{{ show.authors }}</a>
 			-
 			<a href="{{ path('emission', { id: show.id, type: show.typeSlug }) }}">{{ show.title }}</a>
 		</li>
