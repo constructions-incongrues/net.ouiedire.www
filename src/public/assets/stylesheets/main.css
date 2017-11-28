@@ -16,8 +16,8 @@ header {margin-bottom:20px;}
 /* ====== Text treatments ====== */
 
 .grid-30 span {background-color:#000;color:#FFF;padding:4px;display:inline-block;position: relative;left:45px;font-size: 12px;font-size: 1.2rem;font-weight: bold;text-transform: uppercase;}
-.description {font-size: 13px;font-size: 1.3rem;}
-.description img {margin:30px 0 20px 0;}
+.description {font-size: 18px;font-size: 1.3rem;}
+.description img {margin:30px 0 20px 20;}
 .description p {text-align: center;font-weight: bold;font-size: 15px;font-size: 1.5rem;}
 .grid-70 p:nth-child(2) {position: relative;top:20px;left:18px;font-weight: bold;text-transform: uppercase;;background-color: #00CCFF;padding:4px;font-size: 16px;font-size: 1.6rem;	}
 .grid-70 p:nth-child(4){display:inline;position: relative;top:25px;left:0px;font-weight: bold;text-transform: uppercase;;background-color: #73E3FF;padding:4px;font-size: 13px;font-size: 1.3rem;	}
@@ -31,11 +31,22 @@ header {margin-bottom:20px;}
 .social {text-align: left;border: none;margin: 0 0 -15px 15px;padding:10px 0 0 0}
 .social li {list-style-image: none;display: inline;font-size: 12.5px;font-size: 1.25rem;font-weight: bold;text-transform: uppercase;}
 
+.home_type {background-color: #000;}
+.home_authors {background-color:#FFF;padding: 1px;}
+.home_title {background-color: #FFF;padding: 1px;}
+.home_date {background-color: #FFF;padding: 1px;}
+
+.about {font-size: 14px;font-size: 1.5rem;padding: 4px;text-transform: uppercase;font-weight: lighter;background-color: #FCFE04;color: #000;font-weight: bold;margin-left: -14px;margin-bottom: -10px; }
+.diffusion {margin-left:-14px; }
 /* links */
+.home_type a, .home_type {color:#FFF;text-decoration: none;padding: 1px}
+.home_authors a, .home_authors {color:#000;text-decoration: none;padding: 1px}
+.home_title a, .home_title {color:#000;text-decoration: none;padding: 1px}
+.home_title a, .home_title,.home_date a,.home_date {color:#000;text-decoration: none;padding: 1px}
 
-
-li a, dd a:first-child {text-decoration: none;color:#000;background-color: #e6faff;padding: 1px;position:relative;top:-5px;border-bottom: 1px solid #00CCFF;}
-ol a, ol li span,.description a {font-weight: bold;background-color: transparent;border-bottom: none;top:0;}
+.othershows li a {background-color: #e6faff;color: #000; text-decoration: none; padding: 1px; font-weight: bold;}
+/*li a,li, dd a:first-child {text-decoration: none;color:#000;padding: 1px;position:relative;top:-5px;}
+*/ol a, ol li span,.description a {font-weight: bold;background-color: transparent;border-bottom: none;top:0;}
 footer p:first-child a, nav a {background-color: #000;color:#FFF;padding:4px;text-transform: uppercase;font-size:12px;font-size: 1.2rem; }
 footer p:first-child a:hover, nav a:hover {font-weight: normal;border-bottom: 2px solid #00CCFF}
 footer a, .flyer p a {text-decoration: none;color: #000;border-bottom: 1px solid #000;}
@@ -45,6 +56,8 @@ li a:hover, dd a:hover:first-child  {border-bottom: 1px solid #e6faff;background
 .download {float:right;position:relative; margin-top: -1px;}
 .download a {text-decoration: none;color: #FFF;font-weight: bold;margin-left: 1em; margin-right: 1em; text-transform: uppercase; }
 .download a:hover {background-color: transparent; color: #00CCFF;}
+a.urlDownload {color:#000;background-color: #FFF;}
+a.urlDownload {color:#000;background-color: #FFF;}
 ol li a:hover {border-bottom:1px solid #000;background-color: transparent;}
 .description a {color: #000;text-decoration: none;}
 .description a:hover {border-bottom: 1px solid #000;}
@@ -52,7 +65,7 @@ h1 a {color: #FFF;text-decoration: none;}
 .nav p a {text-decoration: none;color:#000;font-weight: bold;;text-decoration: none;font-size: 14px;font-size: 1.4rem;text-transform: uppercase;margin:0 0 0 15px;}
 .nav p a:hover {background-color: #000;color: #FFF;padding: 5px;}
 .grid-70 p a {color: #000;text-decoration: none;}
-h4 a,h5 a {color:#000;text-decoration:none;text-transform: uppercase;font-weight: bold;background-color: #FCFE04;padding: 4px;}
+h4 a,h5 a {color:#000;text-decoration:none;text-transform: uppercase;font-weight: bold;background-color: #FFF;padding: 4px;}
 h4 a:hover {color:#FFF;background-color: #000;}
 .jingle-about a {color:#000;text-decoration: underline;}
 .social a {background-color:transparent;font-weight: bold;text-transform: uppercase;border: none;top:0;}
@@ -67,17 +80,18 @@ h2 {padding:4px;border-bottom:1px dotted #000;text-transform: uppercase;}
 h2 {margin:0 0 30px 16px;font-size: 13px;font-size: 1.3rem; }
 h3 {margin: 0 0 0 18px;font-size: 14px;font-size: 1.5rem;padding: 4px;text-transform: uppercase;font-weight: lighter;}
 h3 {display: block;position: relative;top: 20px;background-color: #000;color: #FFF;margin-bottom: 40px;}
-h6 {margin: -10px 0 20px -20px;font-size: 14px;font-size: 1.5rem;padding: 4px;text-transform: uppercase;font-weight: lighter;}
-h6 {background-color: #000;color: #FFF;}
+h6 {margin: -10px 0 20px 0px;font-size: 14px;font-size: 1.5rem;padding: 4px;text-transform: uppercase;font-weight: lighter;}
+h6 {background-color: #000;color: #FFF;margin-top:10px;margin-left: 10px;}
 .grid-70 h3 {display: inline;color: #FFF;position: relative;top:25px;font-size: 13px;font-weight: bold;font-size: 1.3rem;padding: 4px;text-transform: uppercase;}
 
 h4, h5 {font-size:13px;font-size: 1.3rem;display: inline;position: relative;top: 25px;left:15px;color: #FFF;}
 /* ----- list ----- */
 
-li {margin:5px 0 5px 0;font-size: 15px; font-size: 1.5rem;text-transform: capitalize;}
-ul{ list-style-image:url('../img/files_black.png');margin:30px 0 20px 0; }
+li {margin:10px 0 10px 0;font-size: 15px; font-size: 1.5rem;text-transform: capitalize;}
+ul{ /*list-style-image:url('../img/files_black.png')*/;list-style-type: none;margin-left: -30px;margin-top: 10px;}
 .nav ul, .nav li {display: inline;color:#000;padding: 2px;}
 .nav li a {color:#000;border-bottom: 0px;}
+.othershows ul {margin-left:-14px}
 
 /* **************** TEMPLATE ***************** */
 /* ====== Page Head, Body, and Foot ====== */
@@ -91,13 +105,14 @@ audio {position:relative;left:18px;}
 .description img {max-width:100%;max-height: 100%;}
 
 /* **************** MEDIA PLAYER (http://mediaelementjs.com) ***************** */
-.mejs-container { left: 20px; }
-a.mejs-smartplaylist-time { font-family:"Helvetica"; font-size: 16px;font-style: 1.6rem;font-weight: lighter; font-size: 1.5rem;  color: #333; }
+.mejs-container { left: 12px; }
+a.mejs-smartplaylist-time { font-family:"Helvetica"; font-size: 16px;font-style: 1.6rem;font-weight: lighter; font-size: 1.5rem;  color: #333;text-decoration: none; }
 a.mejs-smartplaylist-time:after { content:"]"; }
 a.mejs-smartplaylist-time:before { content:"["; }
 
 a.mejs-smartplaylist-time.mejs-smartplaylist-current { background-color: #0cf; }
-ol.mejs-smartplaylist-playlist { list-style-type: none; padding-left: 2em; }
+ol.mejs-smartplaylist-playlist { list-style-type: none; padding-left: inherit; }
+ol.mejs-smartplaylist-playlist li {background-color: #e6faff;padding: 1px;margin: 5px;}
 
 .flyer img {      max-width:96%; padding: 0px;margin:0px 0px  20px 20px;}
 .flyer p {font-size: 15px;font-size: 1.5rem;margin: 40px 0px 30px 30px;}
