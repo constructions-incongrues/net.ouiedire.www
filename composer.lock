@@ -4,8 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7686f6035a1bd49d044778a57d552c5a",
-    "content-hash": "6807a07ed63a917eb3e75f608fe6aad9",
+    "content-hash": "9cd9eed9fa18874be3f4f1c6168e3eee",
     "packages": [
         {
             "name": "constructions-incongrues/ananas-build-toolkit",
@@ -15,10 +14,17 @@
                 "url": "git@github.com:constructions-incongrues/ananas-build-toolkit.git",
                 "reference": "0ee984b9958c677b26aa15208fd6ca62fb7d28af"
             },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/constructions-incongrues/anananas/zipball/0ee984b9958c677b26aa15208fd6ca62fb7d28af",
+                "reference": "0ee984b9958c677b26aa15208fd6ca62fb7d28af",
+                "shasum": ""
+            },
             "require": {
                 "php": ">=5.5.0"
             },
             "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
                     "name": "Constructions Incongrues",
@@ -27,11 +33,7 @@
             ],
             "description": "L'Ananas Build Toolkit est un framework de configuration et de déploiement de projet logiciel.",
             "homepage": "https://github.com/constructions-incongrues/ananas-build-toolkit",
-            "support": {
-                "issues": "https://github.com/constructions-incongrues/ananas-build-toolkit/issues",
-                "source": "https://github.com/constructions-incongrues/ananas-build-toolkit"
-            },
-            "time": "2017-03-06 15:25:45"
+            "time": "2017-03-06T15:25:45+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -62,7 +64,7 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
-            "time": "2017-02-14 19:40:03"
+            "time": "2017-02-14T19:40:03+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -108,7 +110,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2013-11-22 08:30:29"
+            "time": "2013-11-22T08:30:29+00:00"
         },
         {
             "name": "psr/container",
@@ -157,7 +159,7 @@
                 "container-interop",
                 "psr"
             ],
-            "time": "2017-02-14 16:28:37"
+            "time": "2017-02-14T16:28:37+00:00"
         },
         {
             "name": "psr/log",
@@ -204,7 +206,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10 12:19:37"
+            "time": "2016-10-10T12:19:37+00:00"
         },
         {
             "name": "silex/silex",
@@ -281,7 +283,7 @@
             "keywords": [
                 "microframework"
             ],
-            "time": "2017-04-30 16:26:54"
+            "time": "2017-04-30T16:26:54+00:00"
         },
         {
             "name": "silex/web-profiler",
@@ -326,39 +328,38 @@
             ],
             "description": "A WebProfiler for Silex",
             "homepage": "http://silex.sensiolabs.org/",
-            "time": "2016-01-10 11:39:13"
+            "time": "2016-01-10T11:39:13+00:00"
         },
         {
             "name": "symfony/css-selector",
-            "version": "v2.6.13",
-            "target-dir": "Symfony/Component/CssSelector",
+            "version": "v3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "560e446b93883050a5874908652e8e912e8cbe44"
+                "reference": "e66394bc7610e69279bfdb3ab11b4fe65403f556"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/560e446b93883050a5874908652e8e912e8cbe44",
-                "reference": "560e446b93883050a5874908652e8e912e8cbe44",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/e66394bc7610e69279bfdb3ab11b4fe65403f556",
+                "reference": "e66394bc7610e69279bfdb3ab11b4fe65403f556",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "symfony/phpunit-bridge": "~2.7"
+                "php": "^5.5.9|>=7.0.8"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
+                "psr-4": {
                     "Symfony\\Component\\CssSelector\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -380,7 +381,7 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "time": "2015-05-15 13:32:45"
+            "time": "2018-01-03T07:37:34+00:00"
         },
         {
             "name": "symfony/debug",
@@ -436,29 +437,28 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-10 16:38:39"
+            "time": "2017-11-10T16:38:39+00:00"
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v2.6.13",
-            "target-dir": "Symfony/Component/DomCrawler",
+            "version": "v3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
-                "reference": "301fca88f26fb57f5ea4020d3abf78d046e5c0ee"
+                "reference": "09bd97b844b3151fab82f2fdd62db9c464b3910a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/301fca88f26fb57f5ea4020d3abf78d046e5c0ee",
-                "reference": "301fca88f26fb57f5ea4020d3abf78d046e5c0ee",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/09bd97b844b3151fab82f2fdd62db9c464b3910a",
+                "reference": "09bd97b844b3151fab82f2fdd62db9c464b3910a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/polyfill-mbstring": "~1.0"
             },
             "require-dev": {
-                "symfony/css-selector": "~2.3",
-                "symfony/phpunit-bridge": "~2.7"
+                "symfony/css-selector": "~2.8|~3.0|~4.0"
             },
             "suggest": {
                 "symfony/css-selector": ""
@@ -466,13 +466,16 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
+                "psr-4": {
                     "Symfony\\Component\\DomCrawler\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -490,7 +493,7 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "https://symfony.com",
-            "time": "2015-07-09 16:02:48"
+            "time": "2018-01-03T07:37:34+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -550,7 +553,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2016-07-19 10:44:15"
+            "time": "2016-07-19T10:44:15+00:00"
         },
         {
             "name": "symfony/finder",
@@ -599,7 +602,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-05 15:25:56"
+            "time": "2017-11-05T15:25:56+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -652,7 +655,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2016-07-17 13:54:30"
+            "time": "2016-07-17T13:54:30+00:00"
         },
         {
             "name": "symfony/http-kernel",
@@ -734,7 +737,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2016-07-30 09:10:37"
+            "time": "2016-07-30T09:10:37+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -793,29 +796,29 @@
                 "portable",
                 "shim"
             ],
-            "time": "2017-10-11 12:05:26"
+            "time": "2017-10-11T12:05:26+00:00"
         },
         {
             "name": "symfony/process",
-            "version": "v2.8.30",
+            "version": "v3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "d25449e031f600807949aab7cadbf267712f4eee"
+                "reference": "ff69f110c6b33fd33cd2089ba97d6112f44ef0ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/d25449e031f600807949aab7cadbf267712f4eee",
-                "reference": "d25449e031f600807949aab7cadbf267712f4eee",
+                "url": "https://api.github.com/repos/symfony/process/zipball/ff69f110c6b33fd33cd2089ba97d6112f44ef0ba",
+                "reference": "ff69f110c6b33fd33cd2089ba97d6112f44ef0ba",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9"
+                "php": "^5.5.9|>=7.0.8"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
@@ -842,7 +845,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-05 15:25:56"
+            "time": "2018-01-03T07:37:34+00:00"
         },
         {
             "name": "symfony/routing",
@@ -917,7 +920,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2016-06-29 05:40:00"
+            "time": "2016-06-29T05:40:00+00:00"
         },
         {
             "name": "symfony/stopwatch",
@@ -966,7 +969,7 @@
             ],
             "description": "Symfony Stopwatch Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-10 18:59:36"
+            "time": "2017-11-10T18:59:36+00:00"
         },
         {
             "name": "symfony/twig-bridge",
@@ -1051,7 +1054,7 @@
             ],
             "description": "Symfony Twig Bridge",
             "homepage": "https://symfony.com",
-            "time": "2017-11-07 11:56:23"
+            "time": "2017-11-07T11:56:23+00:00"
         },
         {
             "name": "symfony/web-profiler-bundle",
@@ -1110,7 +1113,7 @@
             ],
             "description": "Symfony WebProfilerBundle",
             "homepage": "https://symfony.com",
-            "time": "2017-11-05 16:18:41"
+            "time": "2017-11-05T16:18:41+00:00"
         },
         {
             "name": "twig/twig",
@@ -1175,7 +1178,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-09-27 18:06:46"
+            "time": "2017-09-27T18:06:46+00:00"
         },
         {
             "name": "zendframework/zend-escaper",
@@ -1219,7 +1222,7 @@
                 "escaper",
                 "zf2"
             ],
-            "time": "2016-06-30 19:48:38"
+            "time": "2016-06-30T19:48:38+00:00"
         },
         {
             "name": "zendframework/zend-feed",
@@ -1280,7 +1283,7 @@
                 "feed",
                 "zf2"
             ],
-            "time": "2017-04-01 15:03:14"
+            "time": "2017-04-01T15:03:14+00:00"
         },
         {
             "name": "zendframework/zend-hydrator",
@@ -1338,7 +1341,7 @@
                 "hydrator",
                 "zf2"
             ],
-            "time": "2016-02-18 22:38:26"
+            "time": "2016-02-18T22:38:26+00:00"
         },
         {
             "name": "zendframework/zend-servicemanager",
@@ -1390,7 +1393,7 @@
                 "servicemanager",
                 "zf2"
             ],
-            "time": "2016-12-19 19:14:29"
+            "time": "2016-12-19T19:14:29+00:00"
         },
         {
             "name": "zendframework/zend-stdlib",
@@ -1449,7 +1452,7 @@
                 "stdlib",
                 "zf2"
             ],
-            "time": "2016-04-12 21:17:31"
+            "time": "2016-04-12T21:17:31+00:00"
         }
     ],
     "packages-dev": [],
