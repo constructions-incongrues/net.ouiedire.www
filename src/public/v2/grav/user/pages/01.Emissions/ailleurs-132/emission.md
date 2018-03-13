@@ -1,0 +1,19 @@
+---
+published: true
+title: 'Motricité Labiale et Psychophonétique Articulatoire'
+collection: ailleurs
+release_date: '2016-05-30 00:00:00'
+image:
+    user/pages/01.Emissions/ailleurs-132/ouiedire_ailleurs-132_cover-1.png: { name: ouiedire_ailleurs-132_cover-1.png, type: image/png, size: 437222, path: user/pages/01.Emissions/ailleurs-132/ouiedire_ailleurs-132_cover-1.png }
+number: '132'
+slug: ailleurs-132
+taxonomy:
+    dj: 'Dj ****'
+    artist: ['Alain Goraguer', 'Amoslem Sings', 'Anne Sylvestre', Anoux, 'Captain Tarthopom', 'François de Closets', 'Fréquence Meurtre', 'Gym Pour Tous', 'Henri Guédon', 'Jean-François Gaël', Jingle, 'La Nuit du Hockey', 'La Nuit du Hockey + Claude Péloquin', 'Le Roi et L’Oiseau', 'Le Voyageur Magnétique', 'Les Aulocrates', 'Les Octaves', 'Lettre d’Ocre', 'Maurice Jarre', "Ocora\_", 'Renée Cosima', 'Riga Raga', 'Robert Arnaut', 'Roger Carrel', Sonomédia]
+playlists:
+    - { title: null, tracks: [{ timecode: '00:00:00', artists: ['Robert Arnaut'], title: 'Contes Pas si Bêtes' }, { timecode: '00:00:46', artists: ['Henri Guédon'], title: 'Lisapo Ya M’Bonda' }, { timecode: '00:04:00', artists: [Jingle], title: '' }, { timecode: '00:04:22', artists: ['Riga Raga'], title: 'Lo Fringaire' }, { timecode: '00:05:43', artists: ['La Nuit du Hockey'], title: '' }, { timecode: '00:05:48', artists: ['Maurice Jarre'], title: 'Musique et Chansons pour Ubu' }, { timecode: '00:06:25', artists: ['Captain Tarthopom'], title: 'Intime Panique' }, { timecode: '00:08:56', artists: ['La Nuit du Hockey + Claude Péloquin'], title: 'Monsieur L’Indien' }, { timecode: '00:13:45', artists: ['Fréquence Meurtre'], title: '' }, { timecode: '00:14:19', artists: ["Ocora\_"], title: 'Polyphonies et Techniques Vocales' }, { timecode: '00:15:29', artists: ['Fréquence Meurtre'], title: '' }, { timecode: '00:15:37', artists: ['Les Octaves'], title: 'Un Enfant des Sables' }, { timecode: '00:17:17', artists: ['Les Aulocrates'], title: Engadine }, { timecode: '00:20:07', artists: ['François de Closets'], title: 'A la Conquête de la Lune' }, { timecode: '00:20:11', artists: ['Amoslem Sings'], title: 'A White Man’s Heaven…' }, { timecode: '00:23:13', artists: ['Le Voyageur Magnétique'], title: 'Dialogue Automatique' }, { timecode: '00:25:52', artists: ['Roger Carrel'], title: 'Le Dauphin' }, { timecode: '00:27:50', artists: ['Fréquence Meurtre'], title: '' }, { timecode: '00:28:00', artists: ['Renée Cosima'], title: 'Orgue de Barbarie' }, { timecode: '00:31:00', artists: ['Fréquence Meurtre'], title: '' }, { timecode: '00:31:08', artists: ['François de Closets'], title: 'A la Conquête de la Lune' }, { timecode: '00:31:42', artists: ['Alain Goraguer'], title: 'Les Fusées' }, { timecode: '00:33:58', artists: ['Jean-François Gaël'], title: Profiteroles }, { timecode: '00:34:43', artists: [Sonomédia], title: 'Une Première pour le Centenaire' }, { timecode: '00:35:38', artists: ['Maurice Jarre'], title: 'Musique et Chansons pour Ubu' }, { timecode: '00:36:17', artists: ['Anne Sylvestre'], title: 'Histoire de Vélo' }, { timecode: '00:36:44', artists: ['Gym Pour Tous'], title: '' }, { timecode: '00:39:03', artists: ['Le Roi et L’Oiseau'], title: '' }, { timecode: '00:42:17', artists: ['Lettre d’Ocre'], title: '' }, { timecode: '00:45:21', artists: [Anoux], title: 'Oui Mon Amour' }, { timecode: '00:48:54', artists: [Sonomédia], title: 'Une Première pour le Centenaire' }] }
+presentation: ''
+image_hd:
+    user/pages/01.Emissions/ailleurs-132/ouiedire_ailleurs-132_cover_hd.png: { name: ouiedire_ailleurs-132_cover_hd.png, type: image/png, size: 437222, path: user/pages/01.Emissions/ailleurs-132/ouiedire_ailleurs-132_cover_hd.png }
+
+---

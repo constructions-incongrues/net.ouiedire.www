@@ -1,0 +1,19 @@
+---
+published: true
+title: 'EM :''O( MIX 2'
+collection: ailleurs
+release_date: '2013-07-01 00:00:00'
+image:
+    user/pages/01.Emissions/ailleurs-21/ouiedire_ailleurs-21_cover-1.png: { name: ouiedire_ailleurs-21_cover-1.png, type: image/png, size: 247902, path: user/pages/01.Emissions/ailleurs-21/ouiedire_ailleurs-21_cover-1.png }
+number: '21'
+slug: ailleurs-21
+taxonomy:
+    dj: 'Dee How You'
+    artist: ['Ave Maria played on steel drums', 'Best Cry Ever / Pan Pipes Unchained Melody Deehowyous mix', 'Best Cry Ever Bodyguard Remix', 'Best Cry Ever Slayer version', 'Comment Vivre Sans Toit', 'Danièle et Michèle', 'Denise Grey', 'Jeanne Calment', Kismyder, 'L''Skadrille', 'Le Bébé Schtroumpf', 'Les clopes', Maloyab, Méditation, Narto, Ornicard, 'Paul Kouyak']
+playlists:
+    - { title: null, tracks: [{ timecode: '00:00:00', artists: ['Best Cry Ever / Pan Pipes Unchained Melody Deehowyous mix'], title: '' }, { timecode: '00:01:17', artists: ['Denise Grey'], title: 'Devenir Vieux' }, { timecode: '00:04:57', artists: ['Jeanne Calment'], title: Historycalment }, { timecode: '00:06:17', artists: [Méditation], title: 'La transition des êtres chers (extrait)' }, { timecode: '00:08:15', artists: ['Danièle et Michèle'], title: 'Mon cheval est mort' }, { timecode: '00:10:00', artists: ['Best Cry Ever Slayer version'], title: '' }, { timecode: '00:10:24', artists: ['Comment Vivre Sans Toit'], title: présentation }, { timecode: '00:11:44', artists: ['Comment Vivre Sans Toit'], title: extraits }, { timecode: '00:13:13', artists: ['Les clopes'], title: 'Je fume des clopes dans un blockhaus noir' }, { timecode: '00:16:21', artists: [Narto], title: Lycée }, { timecode: '00:17:31', artists: ['L''Skadrille'], title: Problèmes }, { timecode: '00:18:49', artists: ['Le Bébé Schtroumpf'], title: 'La Berceuse du Bébé Schtroumpf' }, { timecode: '00:21:43', artists: [Maloyab], title: 'L''enfant qui ne parle pas' }, { timecode: '00:26:31', artists: [Ornicard], title: 'Un enfant (tart-t  remix)' }, { timecode: '00:28:20', artists: ['Comment Vivre Sans Toit'], title: extraits }, { timecode: '00:29:48', artists: ['Ave Maria played on steel drums'], title: '' }, { timecode: '00:30:51', artists: [Kismyder], title: 'Le Sida' }, { timecode: '00:33:27', artists: ['Best Cry Ever Bodyguard Remix'], title: '' }, { timecode: '00:33:43', artists: ['Comment Vivre Sans Toit'], title: extraits }, { timecode: '00:36:31', artists: ['Paul Kouyak'], title: 'L''Homme de la Tour (Fort Boyard OST) / SOS Amitié Île-de-France Deehowyous mix' }] }
+presentation: " « C'est comme une bougie qu'on oublierait d'éteindre » / « Je suis la plus vieille du monde » / « Ceux qui ont pris à ce stade de leur évolution une décision différente de la nôtre » / « J'ai du chagrin dans ma souffrance » / « Une conception italo-belge » / « Où est ma dignité dans ma précarité » / « Je fume des clopes dans un blockhaus noir parce que je suis déprimé » / « Quand j'ai vu ma classe putain mais j'ai pété un plomb » / « Il n'y a pas de vie dans mon éjaculation » / « Bébé schtroumpf, d'un sourire tu as su conquérir nos coeurs » / « It's pwobably a child who has been raped, attouched, abused, by a pidophaïle » / « Maltraitante physique, mal-être psychique, corps meurtris, douleur, pleurs, cris, hématomes, brulures, fractures, sévices, supplices, coups portés, dissimulés » / « Regarde ma maison, ma maison de carton » / « J'ai le sida » / « Je n'ai pas de maison » / « Une angoisse ? Un coup de blues ? Une solitude mal vécue ? »\n\n[www.julienkedryna.com](http://www.julienkedryna.com)"
+image_hd:
+    user/pages/01.Emissions/ailleurs-21/ouiedire_ailleurs-21_cover_hd.png: { name: ouiedire_ailleurs-21_cover_hd.png, type: image/png, size: 247902, path: user/pages/01.Emissions/ailleurs-21/ouiedire_ailleurs-21_cover_hd.png }
+
+---

@@ -1,0 +1,19 @@
+---
+published: true
+title: 'Le Bix de Balade'
+collection: ailleurs
+release_date: '2014-03-05 00:00:00'
+image:
+    user/pages/01.Emissions/ailleurs-44/ouiedire_ailleurs-44_cover-1.png: { name: ouiedire_ailleurs-44_cover-1.png, type: image/png, size: 458228, path: user/pages/01.Emissions/ailleurs-44/ouiedire_ailleurs-44_cover-1.png }
+number: '44'
+slug: ailleurs-44
+taxonomy:
+    dj: 'Alexis Malbert (Tapetronic)'
+    artist: ['Alan Parker - Hippy', 'Anton Lavey', 'Bizarre Ejaculation', 'Christine Lamoure', 'Craps on The Bitch', 'Dj Smallcock', 'Fucking Pigs', 'Gaston & Purcell', 'Gwilly Edmondez', 'Hematoputrefaction Sexologicunt', 'Henri Chopin', 'Ignaz Schick et Martin Tétreault', Jingle, 'Kadaver Torso', 'Mike Sady', 'Naing Naing', Papiperez, Quintron, 'Roger Roger', 'Ron Capone and his Orchestra', 'Royan Fréquence The Best of Jingles', 'Skills Music', 'Spiral Worms', 'Stahlgren and Ferguson', 'Yasunao Tone']
+playlists:
+    - { title: null, tracks: [{ timecode: '00:01:00', artists: ['Naing Naing'], title: Greensleeves }, { timecode: '00:02:40', artists: [Jingle], title: '' }, { timecode: '00:03:39', artists: ['Bizarre Ejaculation'], title: 'Drowning In Uterovaginal Secretions' }, { timecode: '00:04:56', artists: ['Gwilly Edmondez'], title: 'Dutch Werd' }, { timecode: '00:06:52', artists: ['Roger Roger'], title: 'Canadian Specific' }, { timecode: '00:09:17', artists: ['Fucking Pigs'], title: 'Best Individual Song On The CD' }, { timecode: '00:10:40', artists: ['Alan Parker - Hippy'], title: '' }, { timecode: '00:12:12', artists: ['Hematoputrefaction Sexologicunt'], title: 'Anorragia bulimicofagica' }, { timecode: '00:14:44', artists: ['Dj Smallcock'], title: 'Rocket to DNA' }, { timecode: '00:15:40', artists: [Quintron], title: 'The Bridge' }, { timecode: '00:17:27', artists: ['Naing Naing'], title: 'Wasp tabla' }, { timecode: '00:18:52', artists: ['Roger Roger'], title: 'Sounds Industrial 15' }, { timecode: '00:20:57', artists: ['Kadaver Torso'], title: 'The Several Minutes of Surgery' }, { timecode: '00:21:52', artists: ['Gaston & Purcell'], title: 'Chicken Dance' }, { timecode: '00:23:56', artists: ['Henri Chopin'], title: 'Alphabet et Glotté' }, { timecode: '00:25:31', artists: ['Spiral Worms'], title: 'Naegleria Fowleri Amoebia' }, { timecode: '00:27:31', artists: ['Craps on The Bitch'], title: 'Gouda''s Hole' }, { timecode: '00:31:00', artists: ['Stahlgren and Ferguson'], title: 'The Unruly Guts' }, { timecode: '00:31:42', artists: ['Gwilly Edmondez'], title: 'Pops N Drops' }, { timecode: '00:33:42', artists: ['Ron Capone and his Orchestra'], title: 'Gloo Gloo Water Trumpet' }, { timecode: '00:36:33', artists: ['Royan Fréquence The Best of Jingles'], title: 'Zoo de la Palmyre' }, { timecode: '00:37:08', artists: ['Skills Music'], title: 'MJ remix' }, { timecode: '00:41:08', artists: ['Anton Lavey'], title: 'Satan Takes a Holiday' }, { timecode: '00:43:02', artists: ['Christine Lamoure'], title: Ekstase }, { timecode: '00:44:08', artists: ['Yasunao Tone'], title: 'Solo for Wounded CD' }, { timecode: '00:46:47', artists: ['Mike Sady'], title: 'Conte Erotico-Sadique' }, { timecode: '00:47:10', artists: ['Ignaz Schick et Martin Tétreault'], title: '3-p45 trois' }, { timecode: '00:54:33', artists: [Papiperez], title: 'La cumbia de Freddy Krueger' }] }
+presentation: "Pour finir l'hiver, rien de tel qu'un mix pour tuer tous ces vilains microbes. 59 minutes d'étrangetés audio pour dégeler les oreilles à coup de cris de cochons et d'histoires cochonnes. Une playlist gutturale et humide à bien garder dans la gorge, c'est une prescription !\n\n[http://www.alexismalbert.com](http://www.alexismalbert.com/)"
+image_hd:
+    user/pages/01.Emissions/ailleurs-44/ouiedire_ailleurs-44_cover_hd.png: { name: ouiedire_ailleurs-44_cover_hd.png, type: image/png, size: 1646593, path: user/pages/01.Emissions/ailleurs-44/ouiedire_ailleurs-44_cover_hd.png }
+
+---

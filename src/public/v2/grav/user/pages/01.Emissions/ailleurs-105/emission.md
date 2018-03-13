@@ -1,0 +1,19 @@
+---
+published: true
+title: 'Idylle du chiite'
+collection: ailleurs
+release_date: '2015-11-09 00:00:00'
+image:
+    user/pages/01.Emissions/ailleurs-105/ouiedire_ailleurs-105_cover-1.png: { name: ouiedire_ailleurs-105_cover-1.png, type: image/png, size: 275529, path: user/pages/01.Emissions/ailleurs-105/ouiedire_ailleurs-105_cover-1.png }
+number: '105'
+slug: ailleurs-105
+taxonomy:
+    dj: Fourmi
+    artist: ['Akira OST', 'Apogee & Perigee', Booze, Camillo, Capuchon, 'Christian Bruhn', Deux, Dimlite, Dollkraut, 'Duke Slammer', 'Earthbound OST', 'Ennio Morricone', Femminielli, Goblin, 'J.J. Fad', 'James Pants', Lanzo, 'Les Mersey’s', 'Louis Poutre', 'Miharu Koshi', Morusque, 'Naked City', 'Patrick Cowley', 'Pedro Morquecho', Pinkfink, Space, 'Stereo Total', 'The Hollywood Edge', 'The Legend Lady J', user48736353001]
+playlists:
+    - { title: null, tracks: [{ timecode: '00:00:00', artists: ['Christian Bruhn'], title: 'Der Böse' }, { timecode: '00:03:02', artists: [Deux], title: Felicita }, { timecode: '00:06:01', artists: ['Stereo Total'], title: 'Orange Mécanique' }, { timecode: '00:08:40', artists: [Morusque], title: 'Je cuis vite' }, { timecode: '00:09:30', artists: ['Louis Poutre'], title: 'Petite Annonce' }, { timecode: '00:12:12', artists: [Capuchon], title: 'Petite Culotte' }, { timecode: '00:15:42', artists: ['Apogee & Perigee'], title: 逆さ賢人・イーガス }, { timecode: '00:19:31', artists: ['The Hollywood Edge'], title: 'Analog Tape Song 1' }, { timecode: '00:19:49', artists: ['Duke Slammer'], title: Plucky }, { timecode: '00:23:03', artists: [user48736353001], title: Plinkyplonk }, { timecode: '00:27:13', artists: [Pinkfink], title: 'Fear the Night' }, { timecode: '00:31:59', artists: [Femminielli], title: 'O Sodoma' }, { timecode: '00:34:58', artists: ['Earthbound OST'], title: 'Deeper into Ness'' Subconscious + Kid606 - Let''s Get Radioactive (Acapella)' }, { timecode: '00:35:37', artists: [Dimlite], title: 'Into Vogon Skulls' }, { timecode: '00:38:57', artists: [Booze], title: 'Insanity Drive' }, { timecode: '00:43:21', artists: [Dollkraut], title: 'La Banda Dello Scorpione Seq 6' }, { timecode: '00:46:15', artists: ['Patrick Cowley'], title: 'School Daze' }, { timecode: '00:49:47', artists: ['Naked City'], title: Batman }, { timecode: '00:51:46', artists: ['Ennio Morricone'], title: 'Giardino Delle Delizie' }, { timecode: '00:54:39', artists: ['Akira OST'], title: 'Doll’s Polyphony + Kid606 - Let''s Get Radioactive (Acapella)' }, { timecode: '00:55:24', artists: ['Pedro Morquecho'], title: 'The Man I Love' }, { timecode: '00:58:24', artists: [Camillo], title: 'Sag Warum' }, { timecode: '01:00:42', artists: ['Les Mersey’s'], title: 'T''en Fais Pas Jacques' }, { timecode: '01:03:03', artists: ['The Hollywood Edge'], title: 'Analog Tape Song 2' }, { timecode: '01:03:09', artists: [Goblin], title: Suspiria }, { timecode: '01:05:32', artists: ['Earthbound OST'], title: 'Dangerous Caves + Kid606 - Let''s Get Radioactive (Acapella)' }, { timecode: '01:06:30', artists: ['James Pants'], title: Black }, { timecode: '01:08:12', artists: ['J.J. Fad'], title: 'Eenie Meenie Beats' }, { timecode: '01:11:03', artists: ['The Legend Lady J'], title: 'Find a Hoe' }, { timecode: '01:14:57', artists: [Lanzo], title: 'E&j Ea' }, { timecode: '01:16:59', artists: ['Earthbound OST'], title: 'Buzz Buzz''s Prophecy + Kid606 - Let''s Get Radioactive (Acapella)' }, { timecode: '01:17:39', artists: [Space], title: 'Ballad For Space Lovers' }, { timecode: '01:19:54', artists: ['Miharu Koshi'], title: 'Ave Maria' }] }
+presentation: ''
+image_hd:
+    user/pages/01.Emissions/ailleurs-105/ouiedire_ailleurs-105_cover_hd.png: { name: ouiedire_ailleurs-105_cover_hd.png, type: image/png, size: 664826, path: user/pages/01.Emissions/ailleurs-105/ouiedire_ailleurs-105_cover_hd.png }
+
+---

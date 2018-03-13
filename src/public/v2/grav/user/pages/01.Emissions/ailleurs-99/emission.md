@@ -1,0 +1,19 @@
+---
+published: true
+title: 'Salt Shaker III'
+collection: ailleurs
+release_date: '2015-07-27 00:00:00'
+image:
+    user/pages/01.Emissions/ailleurs-99/ouiedire_ailleurs-99_cover-1.png: { name: ouiedire_ailleurs-99_cover-1.png, type: image/png, size: 823885, path: user/pages/01.Emissions/ailleurs-99/ouiedire_ailleurs-99_cover-1.png }
+number: '99'
+slug: ailleurs-99
+taxonomy:
+    dj: 'Dj Sainte Rita'
+    artist: ['?', 'A Blaze Colour', Anquette, 'Bande Berne Crematoire', Benga, 'Chen Yi', 'DJ Fokus', 'DJ Funk', 'DJ Nehpets', 'DJ Neptune x DJ 809', 'DJ Rashad & DJ Spinn', 'DJ Smurf', 'DJ Spanish Fly', Diplo, Disco, 'Groove x DJ 809', 'Howie Lee feat. Zaiio', 'Kaba Blon', 'Kevin JZ Prodigy', Kidgagball, 'Logosamphia & The Bran Flakes', 'Paul Blackford', 'RP Boo', Schlachthofbronx, 'Sugur Shane', 'The Puppies', Tuxedomoon, Vaishali, 'Venetian Snares', 'Ynfynyt Scroll']
+playlists:
+    - { title: null, tracks: [{ timecode: '00:00:00', artists: ['DJ Spanish Fly'], title: 'Pop dat Pussy' }, { timecode: '00:03:02', artists: [Benga], title: Skank }, { timecode: '00:03:55', artists: ['DJ Smurf'], title: 'Pop That Pussy, Shake That Ass' }, { timecode: '00:06:30', artists: [Anquette], title: 'Shake it (Do the 61th)' }, { timecode: '00:08:16', artists: ['Kaba Blon'], title: 'Furu Djougou' }, { timecode: '00:10:50', artists: ['DJ Neptune x DJ 809'], title: 'Jackz Anthem' }, { timecode: '00:12:00', artists: ['Groove x DJ 809'], title: 'Bounce to da Beat' }, { timecode: '00:12:30', artists: ['DJ Funk'], title: 'Booty Clap' }, { timecode: '00:13:10', artists: ['The Puppies'], title: 'Funky Y-2-C' }, { timecode: '00:16:04', artists: [Disco], title: 'Where the Booty at (Git it Girl)' }, { timecode: '00:17:28', artists: ['Ynfynyt Scroll'], title: 'Let me See it (Divoli S''Vere & MikeQ Remix)' }, { timecode: '00:18:25', artists: ['Sugur Shane'], title: 'Boy Girl Fling' }, { timecode: '00:20:37', artists: ['A Blaze Colour'], title: 'A Means to an End' }, { timecode: '00:23:15', artists: ['Kevin JZ Prodigy'], title: 'Vogue Session 5 & 2' }, { timecode: '00:27:37', artists: ['RP Boo'], title: 'Let''s Dance Again' }, { timecode: '00:29:00', artists: ['DJ Fokus'], title: Chillout }, { timecode: '00:30:45', artists: ['DJ Nehpets'], title: 'Lay it Down' }, { timecode: '00:32:40', artists: ['Chen Yi'], title: Rug }, { timecode: '00:34:47', artists: ['DJ Rashad & DJ Spinn'], title: 'DJ Rashad Meet Tshetsha Boys' }, { timecode: '00:36:30', artists: ['?'], title: 'The Don' }, { timecode: '00:38:00', artists: [Diplo], title: 'Biggie Bounce (Poivre Jukedout)' }, { timecode: '00:40:57', artists: ['Paul Blackford'], title: G-Force }, { timecode: '00:42:54', artists: [Schlachthofbronx], title: 'Dickie Riddim (feat. Warrior Queen)' }, { timecode: '00:44:00', artists: ['Bande Berne Crematoire'], title: Ende }, { timecode: '00:45:18', artists: [Vaishali], title: 'Channai Pattanam' }, { timecode: '00:46:33', artists: [Kidgagball], title: Jukalistik }, { timecode: '00:47:10', artists: ['Howie Lee feat. Zaiio'], title: Tanh }, { timecode: '00:49:35', artists: ['Venetian Snares'], title: 'Einstein Rosen Bridge' }, { timecode: '00:52:30', artists: ['Logosamphia & The Bran Flakes'], title: Inidadbodja }, { timecode: '00:56:00', artists: [Tuxedomoon], title: Jinx }] }
+presentation: "...jusqu'au dernier morceau, dans lequel le chanteur de Tuxedomoon vous chuchote à l'oreille : \"shake it... shake it...\"\n\n<https://www.mixcloud.com/Sainte-Rita/>"
+image_hd:
+    user/pages/01.Emissions/ailleurs-99/ouiedire_ailleurs-99_cover_hd.png: { name: ouiedire_ailleurs-99_cover_hd.png, type: image/png, size: 583702, path: user/pages/01.Emissions/ailleurs-99/ouiedire_ailleurs-99_cover_hd.png }
+
+---

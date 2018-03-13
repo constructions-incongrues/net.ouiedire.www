@@ -1,0 +1,19 @@
+---
+published: true
+title: 'Pure Innocense'
+collection: ailleurs
+release_date: '2014-04-24 00:00:00'
+image:
+    user/pages/01.Emissions/ailleurs-48/ouiedire_ailleurs-48_cover-1.png: { name: ouiedire_ailleurs-48_cover-1.png, type: image/png, size: 185217, path: user/pages/01.Emissions/ailleurs-48/ouiedire_ailleurs-48_cover-1.png }
+number: '48'
+slug: ailleurs-48
+taxonomy:
+    dj: 'Norman Bambi'
+    artist: ['AL MASSRIEEN', 'CARLO CARIOLA', 'CHEN QIONG MEI', 'CHILL E.B. AND THE POSSE', 'COMOESTA YAEGASHI', 'DALIA BAYEN ALINA', 'DELICATE STEVE', DETERMINATION, DEVA, 'DING DO HYUN', 'DYNAMIX II FEAT. TOO TOUGH TEE', 'HIROMI OTA', ILAIYARAAJA, 'JHALIB FEAT. SHEILA CHANDRA', 'JOE COOL', KOTOMOTO, MELON, 'MIRANDA MARTINO & ENNIO MORRICONE', 'NAHKI & TOMATOS', 'OBNOXIOUS HIROSHI', 'PINO D´ANGIO', 'PRINCE SOLIMAN', ROGER, 'SANDU CIORBA', 'THE DOOPEES', 'THE ORIGINALS', 'THE SOCIAL OUTCASTS', TPO, VIDEOSEX]
+playlists:
+    - { title: null, tracks: [{ timecode: '00:00:09', artists: ['THE DOOPEES'], title: 'greeting from the doopees' }, { timecode: '00:01:16', artists: [MELON], title: 'pure innocence' }, { timecode: '00:05:12', artists: ['CHILL E.B. AND THE POSSE'], title: 'dog down' }, { timecode: '00:07:20', artists: [DEVA], title: 'mun arivippu' }, { timecode: '00:10:47', artists: ['MIRANDA MARTINO & ENNIO MORRICONE'], title: paura }, { timecode: '00:13:26', artists: ['NAHKI & TOMATOS'], title: 'do what you want' }, { timecode: '00:17:01', artists: ['THE ORIGINALS'], title: 'the whip' }, { timecode: '00:18:46', artists: [KOTOMOTO], title: kotomoto }, { timecode: '00:20:40', artists: ['AL MASSRIEEN'], title: 'la civilisation egyptienne' }, { timecode: '00:23:18', artists: ['AL MASSRIEEN'], title: 'mickey mouse' }, { timecode: '00:25:35', artists: ['JHALIB FEAT. SHEILA CHANDRA'], title: 'mysteries of the east' }, { timecode: '00:30:41', artists: [ILAIYARAAJA], title: 'kangal rendum' }, { timecode: '00:34:58', artists: ['PRINCE SOLIMAN'], title: 'je veux dire shérif' }, { timecode: '00:38:23', artists: ['HIROMI OTA'], title: 'Aoi mi no Hitomi' }, { timecode: '00:41:16', artists: ['OBNOXIOUS HIROSHI'], title: 'hiroshi the scratcher' }, { timecode: '00:44:45', artists: ['JOE COOL'], title: '3 Fly Guys' }, { timecode: '00:48:44', artists: ['DALIA BAYEN ALINA'], title: 'high quality vol.2' }, { timecode: '00:52:49', artists: ['THE SOCIAL OUTCASTS'], title: mad }, { timecode: '00:54:33', artists: ['MIRANDA MARTINO & ENNIO MORRICONE'], title: 'maraviglioso momento' }, { timecode: '00:56:41', artists: [VIDEOSEX], title: 'kako bih volio da si tu' }, { timecode: '00:58:32', artists: [TPO], title: 'camacho preguiçosa' }, { timecode: '01:02:05', artists: [ROGER], title: 'in the mix' }, { timecode: '01:08:22', artists: ['SANDU CIORBA'], title: 'pe cimpoi' }, { timecode: '01:10:29', artists: ['COMOESTA YAEGASHI'], title: 'main title / amaranth remix' }, { timecode: '01:13:48', artists: ['DELICATE STEVE'], title: 'wally wilder' }, { timecode: '01:18:02', artists: ['PINO D´ANGIO'], title: 'è libero, scusi' }, { timecode: '01:22:19', artists: ['CARLO CARIOLA'], title: 'se non mi dai le lire per il cinema' }, { timecode: '01:24:15', artists: ['DYNAMIX II FEAT. TOO TOUGH TEE'], title: 'straight from the jungle' }, { timecode: '01:27:18', artists: [DETERMINATION], title: 'stay in school' }, { timecode: '01:28:13', artists: [DETERMINATION], title: boldylocks }, { timecode: '01:36:13', artists: ['CHEN QIONG MEI'], title: 'lflp 275 mandopop' }, { timecode: '01:38:52', artists: ['DING DO HYUN'], title: 'cabaret jeunes étoiles' }] }
+presentation: '<http://normanbambi.bandcamp.com/>'
+image_hd:
+    user/pages/01.Emissions/ailleurs-48/ouiedire_ailleurs-48_cover_hd.png: { name: ouiedire_ailleurs-48_cover_hd.png, type: image/png, size: 185217, path: user/pages/01.Emissions/ailleurs-48/ouiedire_ailleurs-48_cover_hd.png }
+
+---

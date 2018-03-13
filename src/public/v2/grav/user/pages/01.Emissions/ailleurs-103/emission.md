@@ -1,0 +1,19 @@
+---
+published: true
+title: 'Grosse Sieste Nerveuse'
+collection: ailleurs
+release_date: '2015-10-15 00:00:00'
+image:
+    user/pages/01.Emissions/ailleurs-103/ouiedire_ailleurs-103_cover-1.png: { name: ouiedire_ailleurs-103_cover-1.png, type: image/png, size: 332864, path: user/pages/01.Emissions/ailleurs-103/ouiedire_ailleurs-103_cover-1.png }
+number: '103'
+slug: ailleurs-103
+taxonomy:
+    dj: Sudori
+    artist: ['BABY COLORS', 'BLACK PUS', CLIPPING, 'DEAD FADER', DEBMASTER, 'DISS 1', DÄLEK, 'FOOT VILLAGE', 'Gloire à Satan', HANSEL, HEADLOCK, 'LE CRABE & STAZMA', L’HAMORABI, 'MOODIE BLACK', NAH, NAKRAL, 'NEPHLIM MODULATION SYSTEM', NGRRR, 'NO BRIGADE', 'RUN THE JEWELS', 'SAUL WILLIAMS', SCHIZOID, 'SHADY VAN GOGH', 'SIGNOR BENEDICK THE MOOR', 'TECHNO ANIMAL', 'THE HOUSE OF FIX', 'TRUE NEUTRAL CREW', 'VIPER VENOM', 'VORRS & BLOODMOUTH']
+playlists:
+    - { title: null, tracks: [{ timecode: '00:00:00', artists: ['Gloire à Satan'], title: '' }, { timecode: '00:01:18', artists: ['SHADY VAN GOGH'], title: Apostasy }, { timecode: '00:03:12', artists: ['SIGNOR BENEDICK THE MOOR'], title: 'Remix of clipping.''s remix of This Song Is A Drug Deal by Foot Village' }, { timecode: '00:05:10', artists: ['VORRS & BLOODMOUTH'], title: Diphen }, { timecode: '00:07:13', artists: [HANSEL], title: Nutmegz }, { timecode: '00:07:53', artists: ['VIPER VENOM'], title: Goosebumps }, { timecode: '00:09:39', artists: [DÄLEK], title: 'Classical Homicide' }, { timecode: '00:13:15', artists: ['BABY COLORS'], title: 'Hide 4eva (holeminer remix)' }, { timecode: '00:14:41', artists: [DEBMASTER], title: 'Suicide City feat. The Mole' }, { timecode: '00:17:21', artists: ['LE CRABE & STAZMA'], title: 'Apocalypse feat Mike Redman' }, { timecode: '00:19:01', artists: [NAH], title: 'Creepin Worse feat Ho99o9' }, { timecode: '00:20:12', artists: ['NEPHLIM MODULATION SYSTEM'], title: 'Brave New World' }, { timecode: '00:23:37', artists: [CLIPPING], title: 'Guns Up (Bizarre Rituals Remix)' }, { timecode: '00:25:40', artists: ['SAUL WILLIAMS'], title: 'Black History Month' }, { timecode: '00:28:13', artists: [NAKRAL], title: 'Track_13 feat. Hpa' }, { timecode: '00:29:55', artists: ['THE HOUSE OF FIX'], title: 'Tasty feat. Circa (Si Begg remix)' }, { timecode: '00:33:45', artists: ['DEAD FADER'], title: 'Fishsh feat Sensational' }, { timecode: '00:35:30', artists: ['FOOT VILLAGE'], title: 'My Website is a Pitchfork Press Release' }, { timecode: '00:36:10', artists: [NGRRR], title: 'Inner Cretin Resmash Feat Walter Grooss & K The I' }, { timecode: '00:37:25', artists: [NGRRR], title: 'Violence Resmash feat Tha Dezzet Guerilla' }, { timecode: '00:38:40', artists: [HEADLOCK], title: Tunnelvision }, { timecode: '00:41:15', artists: ['BLACK PUS'], title: 'PLAY GOD' }, { timecode: '00:44:05', artists: [L’HAMORABI], title: 'Qarar Zanni' }, { timecode: '00:46:10', artists: ['MOODIE BLACK'], title: 'NO BLOOD feat. Ceschi' }, { timecode: '00:47:54', artists: ['RUN THE JEWELS'], title: 'SNUG AGAIN (Little Shalimar Remix)' }, { timecode: '00:49:25', artists: ['NO BRIGADE'], title: 'Sex Tech' }, { timecode: '00:51:03', artists: ['DISS 1'], title: 'Used to It' }, { timecode: '00:53:52', artists: ['TECHNO ANIMAL'], title: 'Piranha feat. Toastie Taylor' }, { timecode: '00:56:47', artists: ['TRUE NEUTRAL CREW'], title: 'Squad Up feat The Soft Pink Truth' }, { timecode: '00:59:08', artists: [SCHIZOID], title: 'Real Evil (the hyperdriver fluffy mix)' }] }
+presentation: ''
+image_hd:
+    user/pages/01.Emissions/ailleurs-103/ouiedire_ailleurs-103_cover_hd.png: { name: ouiedire_ailleurs-103_cover_hd.png, type: image/png, size: 724245, path: user/pages/01.Emissions/ailleurs-103/ouiedire_ailleurs-103_cover_hd.png }
+
+---
