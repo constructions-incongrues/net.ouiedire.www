@@ -1,0 +1,118 @@
+title: Émission
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+
+        emission:
+          type: tab
+          title: Émission
+
+          fields:
+            header.published:
+              type: toggle
+              label: Publiée ?
+              highlight: 1
+              help: L'émission est-elle visible en ligne ?
+              options:
+                1: Oui
+                0: Non
+              default: 0
+              validate:
+                  type: bool
+
+            header.collection:
+              type: select
+              label: Collection
+              default: ailleurs
+              help: Collection de l'émission
+              options:
+                ailleurs: Ailleurs
+                bagage: Bagage
+                ouiedire: Ouïedire
+              validate:
+                required: true
+
+            header.number:
+              type: text
+              label: Numéro
+              help: Numéro de l'émission au sein de la collection
+              validate:
+                required: true
+
+            header.title:
+              type: text
+              label: Titre
+              help: Titre de l'émission
+              validate:
+                required: true
+
+            header.taxonomy:
+              type: taxonomy
+              label: PLUGIN_ADMIN.TAXONOMY
+              multiple: true
+              validate:
+                type: array
+
+            header.release_date:
+              type: datetime
+              label: Date de publication
+              help: Date de publication de l'émission
+              validate:
+                required: true
+
+            header.image:
+              type: file
+              label: Image
+              help: Image illustrant l'émission
+              destination: self@
+              accept:
+                - image/*
+
+            header.image_hd:
+              type: file
+              label: Image HD
+              help: Image illustrant l'émission (HD)
+              destination: self@
+              accept:
+                - image/*
+
+            header.presentation:
+              type: editor
+              label: Présentation
+              help: Présentation de l'émisison
+
+            header.playlists:
+              type: list
+              style: vertical
+              label: Playlists
+              fields:
+                .title:
+                  type: text
+                  label: Titre
+                .audio_source:
+                  type: file
+                  label: Source audio
+                  help: Le fichier source de l'émission au format Flac
+                  destination: self@
+                  accept:
+                    - .flac
+                .tracks:
+                  type: list
+                  label: Tracks
+                  fields:
+                    .timecode:
+                      type: text
+                      label: Timecode
+                    .artists:
+                      type: selectize
+                      size: large
+                      label: Artiste(s)
+                      classes: fancy
+                    .title:
+                      type: text
+                      label: Titre

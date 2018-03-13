@@ -1,0 +1,210 @@
+@black: #000000;
+@white: #ffffff;
+@dark-white: #ebebeb;
+@blue: #01c4f5;
+@dark-blue: #53B4C4;
+@pink: #ef1f73;
+@yellow: #fcfe04;
+@grey: #808080;
+
+/******************************************color-class*********************************/
+.black {
+  color: @black;
+}
+
+.white {
+  color: @white;
+}
+
+.dark-white {
+  color: @dark-white;
+}
+
+.blue {
+  color: @blue;
+}
+
+.dark-blue {
+  color: @dark-blue;
+}
+
+.pink {
+  color: @pink;
+}
+
+.yellow {
+  color: @yellow;
+}
+
+.grey {
+  color: @grey;
+}
+
+.background-black {
+  background-color: @black;
+}
+
+.background-white {
+  background-color: @white;
+}
+
+.background-dark-white {
+  background-color: @dark-white;
+}
+
+.background-blue {
+  background-color: @blue;
+}
+
+.background-dark-blue {
+  background-color: @dark-blue;
+}
+
+.background-yellow {
+  background-color: @yellow;
+}
+
+.background-pink {
+  background-color: @pink;
+}
+
+.background-dark-white-trans {
+  background-color: fade(@white, 92%);
+}
+
+.background-grey-trans {
+  background-color: fade(@grey, 50%);
+}
+
+/**********************************************Mixins*************************************/
+
+.transition (@prop: all, @time: 0.5s, @ease: ease) {
+  -webkit-transition: @prop @time @ease;
+  -moz-transition: @prop @time @ease;
+  -o-transition: @prop @time @ease;
+  -ms-transition: @prop @time @ease;
+  transition: @prop @time @ease;
+}
+
+.border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+  -webkit-border-top-right-radius: @topright;
+  -webkit-border-bottom-right-radius: @bottomright;
+  -webkit-border-bottom-left-radius: @bottomleft;
+  -webkit-border-top-left-radius: @topleft;
+
+  -moz-border-radius-topright: @topright;
+  -moz-border-radius-bottomright: @bottomright;
+  -moz-border-radius-bottomleft: @bottomleft;
+  -moz-border-radius-topleft: @topleft;
+
+  border-top-right-radius: @topright;
+  border-bottom-right-radius: @bottomright;
+  border-bottom-left-radius: @bottomleft;
+  border-top-left-radius: @topleft;
+
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.opacity (@opacity: 0.5) {
+  -webkit-opacity: @opacity;
+  -moz-opacity: @opacity;
+  opacity: @opacity;
+}
+
+.filter (@value: 100%) {
+  -webkit-filter: grayscale(@value); /* Safari 6.0 - 9.0 */
+  filter: grayscale(@value);
+}
+
+.scale (@value: 1) {
+  -webkit-transform: scale(@value);
+  transform: scale(@value);
+}
+
+.column-count (@count: 2) {
+  -webkit-column-count: @count; /* Chrome, Safari, Opera */
+  -moz-column-count: @count; /* Firefox */
+  column-count: @count;
+}
+
+.column-gap (@value: 3rem) {
+  -webkit-column-gap: @value; /* Chrome, Safari, Opera */
+  -moz-column-gap: @value; /* Firefox */
+  column-gap: @value;
+}
+
+.placeholder (@rules) {
+  &::-webkit-input-placeholder {
+    @rules();
+  }
+  &:-moz-placeholder {
+    @rules();
+  }
+  &::-moz-placeholder {
+    @rules();
+  }
+  &:-ms-input-placeholder {
+    @rules();
+  }
+}
+
+/**********************************************global-style********************************/
+
+* {
+  .transition(all, 0.5s, ease);
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+    color: @black;
+  }
+}
+
+.wrap-all {
+  //max-width: 75%;
+  max-width: 1244px;
+  margin: auto;
+  position: relative;
+  top: -178px;
+  bottom: 0;
+  @media screen and (max-width: 1040px) {
+    max-width: 90%;
+  }
+}
+
+body {
+  background-image: url("../media/image/site/retro_wall.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/**********************************import components-style**********************************/
+
+@import "./components/item_show.less";
+
+/**********************************import partials-style************************************/
+
+@import "./partials/header.less";
+@import "./partials/side.less";
+@import "./partials/main.less";
+@import "./partials/footer.less";
+
+@import "./partials/all_flyers.less";

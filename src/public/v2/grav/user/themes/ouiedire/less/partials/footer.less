@@ -1,0 +1,148 @@
+@import "../styles.less";
+
+footer {
+  .wrap-footer {
+    min-height: 160px;
+    height: auto;
+    max-width: 1244px;
+    margin: auto;
+    text-align: center;
+    div {
+      padding: 10px 0px 0px 20px;
+      font-size: 15px;
+      font-weight: 300;
+      &.footer-left-container {
+        text-align: left;
+        padding: 30px 15px;
+        .row {
+          padding: 0px 15px;
+          margin-bottom: 5px;
+          h6 {
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 0px 2px;
+            min-width: 100px;
+            margin-right: 20px;
+          }
+          ul {
+            @media screen and (max-width: 1599px) {
+              display: block;
+            }
+            li {
+              text-align: center;
+              height: 20px;
+              border-left: solid 1px @grey;
+              min-width: 110px;
+              margin-bottom: 12px;
+              &:first-child {
+                border-left: none;
+              }
+              &:nth-child(4) {
+                border-left: none;
+                white-space: nowrap;
+              }
+              &:last-child {
+                a {
+                  min-width: 180px;
+                  white-space: nowrap;
+                }
+              }
+              @media screen and (max-width: 1599px) {
+                border-left: none;
+                display: block;
+                margin: auto;
+                text-align: left;
+                padding-left: 0px;
+                min-width: 150px;
+                &:last-child a {
+                  left: 0px;
+                }
+              }
+              a {
+                text-transform: uppercase;
+                color: @blue;
+                &:hover {
+                  color: @white;
+                }
+              }
+            }
+          }
+        }
+        a {
+          color: @blue;
+          &:hover {
+            color: @white;
+          }
+        }
+      }
+      &.footer-right-container {
+        text-align: right;
+        padding: 30px 15px;
+        @media screen and (max-width: 1155px) {
+          padding-top: 57px;
+        }
+        @media screen and (max-width: 575px) {
+          padding-top: 0px;
+        }
+        ul.row {
+          margin-bottom: 15px;
+          @media screen and (max-width: 1599px) {
+            display: block;
+            margin-bottom: 2px;
+          }
+          li {
+            text-align: center;
+            height: 20px;
+            border-left: solid 1px @grey;
+            min-width: 80px;
+            &:first-child {
+              border-left: none;
+            }
+            @media screen and (max-width: 1599px) {
+              text-align: left;
+              border-left: none;
+              display: block;
+              margin: 0px;
+            }
+            a {
+              text-transform: uppercase;
+              color: @blue;
+              &:hover {
+                color: @white;
+              }
+            }
+            &:last-child {
+              text-align: end;
+              min-width: 99px;
+              padding-left: 0px;
+              @media screen and (max-width: 1599px) {
+                margin-top: 5px;
+              }
+              a {
+                color: @white;
+                font-size: 19px;
+                padding: 0px 3px;
+                &:last-child {
+                  padding-right: 0px;
+                }
+                &:hover {
+                  color: @blue;
+                }
+              }
+            }
+          }
+        }
+        p {
+          margin: 0;
+          font-size: 12px;
+          a {
+            color: @blue;
+            &:hover {
+              color: @white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

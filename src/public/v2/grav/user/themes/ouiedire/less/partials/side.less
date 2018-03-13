@@ -1,0 +1,337 @@
+@import "../styles.less";
+
+.side {
+  vertical-align: top;
+  padding-left: 0px;
+  padding-right: 0px;
+  position: relative;
+  right: -15px;
+  top: -90px;
+  @media screen and (max-width: 1040px) {
+    position: inherit;
+    right: 0px;
+  }
+  @media screen and (max-width: 920px) {
+    top: -12px;
+  }
+  @media screen and (max-width: 665px) {
+    width: 100%;
+  }
+  .search-container {
+    position: absolute;
+    top: -48px;
+    form {
+      white-space: nowrap;
+      input {
+        border: none;
+        padding-left: 10px;
+        width: 237px;
+        height: 30px;
+        padding: 0px 0px 2px 13px;
+        .border-radiuses(0, 0, 50px, 50px);
+        .placeholder({
+          font-size: 12px;
+        });
+      }
+      button {
+        position: relative;
+        right: 5px;
+        cursor: pointer;
+        border: none;
+        background-color: @white;
+        padding: 4px 10px 2px 0px;
+        vertical-align: top;
+        .border-radiuses(50px, 50px, 0, 0);
+      }
+    }
+  }
+  figure {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    z-index: 2;
+    .visual {
+      height: 366px;
+      width: 366px;
+      @media screen and (max-width: 415px) {
+        height: 245px;
+        width: 245px;
+      }
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .show-infos {
+        position: absolute;
+        left: 276px;
+        top: 83px;
+        z-index: 4;
+        width: 100%;
+        @media screen and (max-width: 1590px) {
+          left: 0;
+          right: auto;
+          top: 0;
+        }
+        h6 {
+          padding: 4px 8px;
+          margin: 0;
+          display: inline-block;
+          text-transform: uppercase;
+          &.last-categorie {
+            font-size: 14px;
+            position: relative;
+            &:hover {
+              color: @pink;
+            }
+            a {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          &.single-categorie {
+            font-size: 14px;
+          }
+          &.show-djs {
+            font-size: 38px;
+            position: relative;
+            &:hover {
+              color: @pink;
+            }
+            a {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+            &.single-djs {
+              &:hover {
+                color: @blue;
+              }
+            }
+          }
+          &.last-title {
+            font-size: 25px;
+            position: relative;
+            white-space: nowrap;
+            &:hover {
+              color: @black;
+            }
+            @media screen and (max-width: 1590px) {
+              white-space: normal;
+            }
+            a {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          &.single-title {
+            font-size: 25px;
+            position: relative;
+            white-space: nowrap;
+            @media screen and (max-width: 1250px) {
+              white-space: normal;
+            }
+          }
+          &.show-date {
+            font-weight: normal;
+            font-size: 15px;
+            margin-right: 100%;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+  .side-container {
+    max-width: 80%;
+    vertical-align: top;
+    position: relative;
+    top: -7px;
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
+    .list-description, .description {
+      font-size: 14px;
+      line-height: 21px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .description {
+      padding-right: 10px;
+      margin-bottom: 30px;
+    }
+    .side-list {
+      margin-bottom: 20px;
+    }
+    .counters {
+      text-align: center;
+      margin-bottom: 30px;
+      li {
+        border-left: solid 1px @grey;
+        display: inline-block;
+        min-width: 87px;
+        &:first-child {
+          border-left: none;
+        }
+        &:last-child {
+          position: relative;
+          right: -11px;
+          padding-left: 0px;
+        }
+        @media screen and (max-width: 1586px) {
+          border-left: none;
+          display: block;
+          margin: auto;
+          width: 100%;
+        }
+        a {
+          color: @black;
+          &:hover {
+            color: @pink;
+            p {
+              color: @pink;
+            }
+          }
+          p {
+            font-size: 32px;
+            margin: 0;
+          }
+          h6 {
+            text-transform: uppercase;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .categories-container {
+      margin-bottom: 0px;
+      .categories {
+        display: inline-block;
+        a {
+          display: inline-block;
+          margin-bottom: 7px;
+          width: auto;
+          padding: 5px 10px;
+          text-transform: uppercase;
+          font-size: 13px;
+          &.ailleurs-link {
+            color: @pink;
+            &:hover {
+              background-color: @pink;
+              color: @white
+            }
+          }
+          &.bagage-link {
+            color: @blue;
+            &:hover {
+              background-color: @blue;
+              color: @white
+            }
+          }
+          &.ouidire-link {
+            color: @black;
+            &:hover {
+              background-color: @black;
+              color: @white
+            }
+          }
+        }
+        p {
+          font-style: italic;
+          font-size: 12px;
+          &.ailleurs-description:after {
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+          }
+          &.bagage-description:after {
+            content: "Quisque tempor diam ut ex bibendum maximus.";
+          }
+          &.ouidire-description:after {
+            content: "Mauris id risus finibus.";
+          }
+        }
+      }
+    }
+    .last-flyer-container {
+      margin-top: 25px;
+      margin-bottom: 0px;
+      .last-flyer {
+        height: 374px;
+        width: 276px;
+        position: relative;
+        z-index: 3;
+        .scale (1);
+        &:hover {
+          .scale (1.1);
+        }
+        a {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .all-flyers-container {
+      padding: 5px 10px 5px 10px;
+      position: relative;
+      top: -7px;
+      width: 169px;
+      z-index: 3;
+      font-size: 12px;
+      &:hover {
+        background-color: @blue;
+      }
+      .all-flyers {
+        padding: 5px 0px 5px 29px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        text-transform: uppercase;
+      }
+    }
+    .share-download-container {
+      position: relative;
+      left: 0px;
+      div {
+        display: inline-block;
+        padding: 3px 9px 7px 7px;
+        margin-bottom: 2px;
+        position: relative;
+        width: 121px;
+        height: 29px;
+        &:hover {
+          background-color: @blue;
+        }
+        &.share {
+          width: 99px;
+        }
+        span {
+          display: inline-block;
+        }
+        a {
+          font-size: 12px;
+          padding: 7px 0 5px 30px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

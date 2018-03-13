@@ -1,0 +1,11 @@
+name: Ouïedire
+version: 1.0.0
+description: "Thème pour le site http://www.ouiedire.net"
+author:
+  name: Constructions Incongrues
+  email: contact@constructions-incongrues.net
+  url: http://www.constructions-incongrues.net
+homepage: https://github.com/constructions-incongrues/net.ouiedire.www
+demo: http://www.ouiedire.net
+bugs: https://github.com/constructions-incongrues/net.ouiedire.www/issues
+license: MIT
