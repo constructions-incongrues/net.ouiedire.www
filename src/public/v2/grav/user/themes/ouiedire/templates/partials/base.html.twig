@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+	<link rel="icon" href="{{ url('theme://images/favicon.png' )}}" type="image/x-icon" />
     {% do assets.addCss('https://use.fontawesome.com/releases/v5.0.6/css/all.css') %}
     {% do assets.addCss('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css') %}
     {% do assets.addCss('https://fonts.googleapis.com/css?family=Roboto:500') %}
@@ -22,25 +23,29 @@
 						<button type="submit"><i class="fas fa-search"></i></button>
 					</form>
 				</div>
+
+{% set latest_show = page.collection({ items: {'@page.children': '/emissions'}, 'limit': 1, 'order': {'by': 'header.release_date', 'dir': 'desc'} }).current() %}
+{% set all_shows = page.collection({ items: {'@page.children': '/emissions'} }) %}
+
 {% block player_infos %}
 				<figure>
-					<div class="visual" style="background-image: url('./media/image/visual/ouiedire_bagage-9_cover-1.png');">
+					<div class="visual" style="background-image: url('{{ url('theme://images/placeholder_cover.png') }}');">
 						<a href="#"></a>
 						<div class="show-infos">
 								<h6 class="white background-black last-categorie">
 									<a href="#"></a>
-									Bagage 01
+									{{ latest_show.header.collection|capitalize }} {{ latest_show.header.number }}
 								</h6><br>
 								<h6 class="black background-white show-djs">
-									Thiaz Itch
+									{{ latest_show.taxonomy.dj|join(', ') }}
 									<a href='#'></a>
 								</h6>
 							<br>
 							<h6 class="white background-pink last-title">
-								Proot Records Proot Mixcomp1
+								{{ latest_show.title }}
 								<a href="#"></a>
 							</h6>
-							<h6 class="white background-pink show-date">23-02-2018</h6>
+							<h6 class="white background-pink show-date">{{ latest_show.header.release_date }}</h6>
 						</div>
 					</div>
 				</figure>
@@ -54,19 +59,19 @@
 					<ul class="counters row">
 						<li class="col-sm-4">
 							<a href="#">
-								<p class="blue">28</p>
+								<p class="blue">{{ taxonomy.getTaxonomyItemKeys('artist')|count }}</p>
 								<h6>artistes</h6>
 							</a>
 						</li>
 						<li class="col-sm-4">
 							<a href="#">
-								<p class="blue">4</p>
+								<p class="blue">{{ all_shows|count }}</p>
 								<h6>émissions</h6>
 							</a>
 						</li>
 						<li class="col-sm-4">
 							<a href="#">
-								<p class="blue">4</p>
+								<p class="blue">{{ taxonomy.getTaxonomyItemKeys('dj')|count }}</p>
 								<h6>djs</h6>
 							</a>
 						</li>
@@ -81,12 +86,12 @@
 							<p class="ailleurs-description"></p>
 						</li>
 						<li class="categories">
-							<a href='#' class="background-white ouidire-link">ouidire</a>
+							<a href='#' class="background-white ouidire-link">ouïedire</a>
 							<p class="ouidire-description"></p>
 						</li>
 					</ul>
 					<figure class="last-flyer-container">
-						<div class="last-flyer" style="background-image: url('./media/image/flyer/fly_ouiedire_01_2018.jpg');">
+						<div class="last-flyer" style="background-image: url('{{ url('theme://images/placeholder_flyer.jpg') }}');">
 							<a href='#'></a>
 						</div>
 					</figure>
@@ -110,63 +115,14 @@
 							<source src="./media/audio/Beat001.wav" type="audio/wav">
 							Your browser does not support the audio element.
 						</audio>
+
 						<ul class="last-artists">
+					{% for artist in latest_show.taxonomy.artist %}
 							<li class="last-artist white background-black white">
 								<a href="#"></a>
-								Tep
+								{{ artist }}
 							</li>
-							<li class="last-artist white background-black white">
-								<a href="#"></a>
-								Katapulto
-							</li>
-							<li class="last-artist white background-black white">
-								<a href="#"></a>
-								Yvan&Lendl
-							</li>
-							<li class="last-artist white background-black white">
-								<a href="#"></a>
-								Batfinks
-							</li>
-							<li class="last-artist white background-black white">
-								<a href="#"></a>
-								Gentlemen
-							</li>
-							<li class="last-artist white background-black white">
-								<a href="#"></a>
-								Goto80 (feat. Acid Terrorist)
-							</li>
-							<li class="last-artist white background-black white">
-								 <a href="#"></a>
-								 Vernon Lenoir
-							</li>
-							<li class="last-artist white background-black white">
-								<a href="#"></a>
-								Silencide
-							</li>
-							<li class="last-artist white background-black white">
-								<a href="#"></a>
-								Ergo Phizmiz
-							</li>
-							<li class="last-artist white background-black white">
-								<a href="#"></a>
-								Thiaz Itch
-							</li>
-							<li class="last-artist white background-black white">
-								<a href="#"></a>
-								Okapi
-							</li>
-							<li class="last-artist white background-black white">
-								<a href="#"></a>
-								Michel Banane Jr.
-							</li>
-							<li class="last-artist white background-black white">
-								<a href="#"></a>
-								David Fenech
-							</li>
-							<li class="last-artist white background-black white">
-								<a href="#"></a>
-								Syndrome WPW
-							</li>
+					{% endfor %}
 						</ul>
 					</div>
 {% endblock %}

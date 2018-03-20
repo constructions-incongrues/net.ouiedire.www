@@ -1,313 +1,33 @@
 {% extends 'partials/base.html.twig' %}
 
+{% set latest_show = page.collection.current() %}
+
 {% block content %}
 <ul class="list-container row"><!--all shows list-->
+{% for show in page.collection %}
     <li class="main-list col-sm-6">
         <h6 class="show-number background-white">
-            09
+            {{ show.header.number }}
             <a href='./single.html' class="black"></a>
         </h6>
         <figure class="show-visual-container">
-            <div class="show-visual" style="background-image: url('./media/image/visual/ouiedire_bagage-9_cover-1.png');">
+            <div class="show-visual" style="background-image: url('{{ url('theme://images/placeholder_cover.png') }}');">
                 <a href='./single.html'></a>
             </div>
         </figure>
         <div class="djs-title-container">
             <div class="djs-container">
                 <h6 class="djs background-white">
-                    Thiaz Itch
+                    {{ show.taxonomy.dj|join(', ') }}
                     <a href='./single.html'></a>
                 </h6>
             </div>
             <h6 class='title background-white pink'>
-                Proot Records Proot Mixcomp1
+                {{ show.title }}
                 <a href='./single.html'></a>
             </h6>
         </div>
     </li>
-    <li class="main-list col-sm-6">
-        <h6 class="show-number background-white">
-            02
-            <a href='./single.html' class="black"></a>
-        </h6>
-        <figure class="show-visual-container">
-            <div class="show-visual" style="background-image: url('./media/image/visual/ouiedire_bagage-9_cover-1.png');">
-                <a href='./single.html'></a>
-            </div>
-        </figure>
-        <div class="djs-title-container">
-            <div class="djs-container">
-                <h6 class="djs background-white">
-                    Bozoo
-                    <a href='./single.html'></a>
-                </h6>
-                <h6 class="djs background-white">
-                    Valkiri
-                    <a href='./single.html'></a>
-                </h6>
-            </div>
-            <h6 class='title background-white black'>
-                Pays de l'est
-                <a href='./single.html'></a>
-            </h6>
-        </div>
-    </li>
-    <li class="main-list col-sm-6">
-        <h6 class="show-number background-white">
-            01
-            <a href='./single.html' class="black"></a>
-        </h6>
-        <figure class="show-visual-container">
-            <div class="show-visual" style="background-image: url('./media/image/visual/ouiedire_bagage-9_cover-1.png');">
-                <a href='./single.html'></a>
-            </div>
-        </figure>
-        <div class="djs-title-container">
-            <div class="djs-container">
-                <h6 class="djs background-white">
-                    Bozoo
-                    <a href='./single.html'></a>
-                </h6>
-                <h6 class="djs background-white">
-                    Valkiri
-                    <a href='./single.html'></a>
-                </h6>
-            </div>
-            <h6 class='title background-white black'>
-                No Theme
-                <a href='./single.html'></a>
-            </h6>
-        </div>
-    </li>
-    <li class="main-list col-sm-6">
-        <h6 class="show-number background-white">
-            01
-            <a href='#' class="black"></a>
-        </h6>
-        <figure class="show-visual-container">
-            <div class="show-visual" style="background-image: url('./media/image/visual/ouiedire_bagage-9_cover-1.png');">
-                <a href='#'></a>
-            </div>
-        </figure>
-        <div class="djs-title-container">
-            <div class="djs-container">
-                <h6 class="djs background-white">
-                    Dj forever
-                    <a href='#'></a>
-                </h6>
-            </div>
-            <h6 class='title background-white blue'>
-                Sans Theme
-                <a href='#'></a>
-            </h6>
-        </div>
-    </li>
-    <li class="main-list col-sm-6">
-        <h6 class="show-number background-white">
-            01
-            <a href='#' class="black"></a>
-        </h6>
-        <figure class="show-visual-container">
-            <div class="show-visual" style="background-image: url('./media/image/visual/ouiedire_bagage-9_cover-1.png');">
-                <a href='#'></a>
-            </div>
-        </figure>
-        <div class="djs-title-container">
-            <div class="djs-container">
-                <h6 class="djs background-white">
-                    Dj forever
-                    <a href='#'></a>
-                </h6>
-            </div>
-            <h6 class='title background-white blue'>
-                Sans Theme
-                <a href='#'></a>
-            </h6>
-        </div>
-    </li>
-    <li class="main-list col-sm-6">
-        <h6 class="show-number background-white">
-            01
-            <a href='#' class="black"></a>
-        </h6>
-        <figure class="show-visual-container">
-            <div class="show-visual" style="background-image: url('./media/image/visual/ouiedire_bagage-9_cover-1.png');">
-                <a href='#'></a>
-            </div>
-        </figure>
-        <div class="djs-title-container">
-            <div class="djs-container">
-                <h6 class="djs background-white">
-                    Dj forever
-                    <a href='#'></a>
-                </h6>
-            </div>
-            <h6 class='title background-white blue'>
-                Sans Theme
-                <a href='#'></a>
-            </h6>
-        </div>
-    </li>
-    <li class="main-list col-sm-6">
-        <h6 class="show-number background-white">
-            01
-            <a href='#' class="black"></a>
-        </h6>
-        <figure class="show-visual-container">
-            <div class="show-visual" style="background-image: url('./media/image/visual/ouiedire_bagage-9_cover-1.png');">
-                <a href='#'></a>
-            </div>
-        </figure>
-        <div class="djs-title-container">
-            <div class="djs-container">
-                <h6 class="djs background-white">
-                    Dj forever
-                    <a href='#'></a>
-                </h6>
-            </div>
-            <h6 class='title background-white blue'>
-                Sans Theme
-                <a href='#'></a>
-            </h6>
-        </div>
-    </li>
-    <li class="main-list col-sm-6">
-        <h6 class="show-number background-white">
-            01
-            <a href='#' class="black"></a>
-        </h6>
-        <figure class="show-visual-container">
-            <div class="show-visual" style="background-image: url('./media/image/visual/ouiedire_bagage-9_cover-1.png');">
-                <a href='#'></a>
-            </div>
-        </figure>
-        <div class="djs-title-container">
-            <div class="djs-container">
-                <h6 class="djs background-white">
-                    Dj forever
-                    <a href='#'></a>
-                </h6>
-            </div>
-            <h6 class='title background-white blue'>
-                Sans Theme
-                <a href='#'></a>
-            </h6>
-        </div>
-    </li>
-    <li class="main-list col-sm-6">
-        <h6 class="show-number background-white">
-            01
-            <a href='#' class="black"></a>
-        </h6>
-        <figure class="show-visual-container">
-            <div class="show-visual" style="background-image: url('./media/image/visual/ouiedire_bagage-9_cover-1.png');">
-                <a href='#'></a>
-            </div>
-        </figure>
-        <div class="djs-title-container">
-            <div class="djs-container">
-                <h6 class="djs background-white">
-                    Dj forever
-                    <a href='#'></a>
-                </h6>
-            </div>
-            <h6 class='title background-white blue'>
-                Sans Theme
-                <a href='#'></a>
-            </h6>
-        </div>
-    </li>
-    <li class="main-list col-sm-6">
-        <h6 class="show-number background-white">
-            01
-            <a href='#' class="black"></a>
-        </h6>
-        <figure class="show-visual-container">
-            <div class="show-visual" style="background-image: url('./media/image/visual/ouiedire_bagage-9_cover-1.png');">
-                <a href='#'></a>
-            </div>
-        </figure>
-        <div class="djs-title-container">
-            <div class="djs-container">
-                <h6 class="djs background-white">
-                    Dj forever
-                    <a href='#'></a>
-                </h6>
-            </div>
-            <h6 class='title background-white blue'>
-                Sans Theme
-                <a href='#'></a>
-            </h6>
-        </div>
-    </li>
-    <li class="main-list col-sm-6">
-        <h6 class="show-number background-white">
-            01
-            <a href='#' class="black"></a>
-        </h6>
-        <figure class="show-visual-container">
-            <div class="show-visual" style="background-image: url('./media/image/visual/ouiedire_bagage-9_cover-1.png');">
-                <a href='#'></a>
-            </div>
-        </figure>
-        <div class="djs-title-container">
-            <div class="djs-container">
-                <h6 class="djs background-white">
-                    Dj forever
-                    <a href='#'></a>
-                </h6>
-            </div>
-            <h6 class='title background-white blue'>
-                Sans Theme
-                <a href='#'></a>
-            </h6>
-        </div>
-    </li>
-    <li class="main-list col-sm-6">
-        <h6 class="show-number background-white">
-            01
-            <a href='#' class="black"></a>
-        </h6>
-        <figure class="show-visual-container">
-            <div class="show-visual" style="background-image: url('./media/image/visual/ouiedire_bagage-9_cover-1.png');">
-                <a href='#'></a>
-            </div>
-        </figure>
-        <div class="djs-title-container">
-            <div class="djs-container">
-                <h6 class="djs background-white">
-                    Dj forever
-                    <a href='#'></a>
-                </h6>
-            </div>
-            <h6 class='title background-white blue'>
-                Sans Theme
-                <a href='#'></a>
-            </h6>
-        </div>
-    </li>
-    <li class="main-list col-sm-6">
-        <h6 class="show-number background-white">
-            01
-            <a href='#' class="black"></a>
-        </h6>
-        <figure class="show-visual-container">
-            <div class="show-visual" style="background-image: url('./media/image/visual/ouiedire_bagage-9_cover-1.png');">
-                <a href='#'></a>
-            </div>
-        </figure>
-        <div class="djs-title-container">
-            <div class="djs-container">
-                <h6 class="djs background-white">
-                    Dj forever
-                    <a href='#'></a>
-                </h6>
-            </div>
-            <h6 class='title background-white blue'>
-                Sans Theme
-                <a href='#'></a>
-            </h6>
-        </div>
-    </li>
+{% endfor %}
 </ul>
 {% endblock %}
