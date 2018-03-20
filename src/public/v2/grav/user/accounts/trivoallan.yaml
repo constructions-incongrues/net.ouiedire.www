@@ -1,0 +1,14 @@
+email: tristan@rivoallan.net
+fullname: 'Tristan Rivoallan'
+title: Administrator
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$PNwFptEbUVJ/tdR9dLSJ.OyQhJa40pJLO8V4/JTU/.F7uhptewQGW
+language: en
+login_attempts: {  }
+twofa_secret: O5FMLMNTBWAKDSYLII2N44KSAODIACH5
