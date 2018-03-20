@@ -7,12 +7,12 @@ vendor/*
 .sass-cache
 
 # Grav Specific
-backup/*
-cache/*
-assets/*
-logs/*
-images/*
-user/plugins/*
+/backup/*
+/cache/*
+/assets/*
+/logs/*
+/images/*
+/user/plugins/*
 
 # OS Generated
 .DS_Store*
