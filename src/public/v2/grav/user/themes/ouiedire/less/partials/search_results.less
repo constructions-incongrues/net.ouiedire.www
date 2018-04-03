@@ -1,0 +1,33 @@
+@import "../styles.less";
+
+.search-results {
+	.side figure .visual .show-infos {
+		top: 148px;
+		@media screen and (max-width: 415px) {
+			top: 0px;
+		}
+		h6 {
+			padding: 4px 15px;
+			&.background-black {
+				font-size: 35px;
+			}
+			&.background-white {
+				font-size: 54px;
+			}
+			&.background-blue {
+				font-size: 25px;
+			}
+		}
+	}
+	.main {
+		height: 64px;
+	}
+	.main-bottom .artist-list-container .list-infos {
+		max-width: 100%;
+	}
+	.main-bottom {
+		.main-list {
+			margin-bottom: 20px;
+		}
+	}
+}

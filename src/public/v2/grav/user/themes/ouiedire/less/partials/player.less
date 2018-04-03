@@ -1,0 +1,153 @@
+@import "../styles.less";
+
+section.player {
+  //height: 500px;
+  overflow-y: auto;
+}
+.player {
+	width: 100%;
+    position: relative;
+    margin: 0;
+    .player-container {
+    	padding-top: 8px;
+    }
+    .wrap-all {
+    	max-width: 1244px;
+    	width: 94%;
+    	margin: auto;
+    	top: 0px;
+    	position: static;
+    }
+    .logo-ouidire {
+        background-image: url("../images/logo.png");
+        max-width: 262px;
+        height: 59px;
+        margin: auto;
+        margin-bottom: 8px;
+        z-index: 4;
+    }
+    .slogan {
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: 5px;
+        margin-bottom: 13px;
+        position: relative;
+        font-size: 14px;
+        min-height: 24px;
+    }
+	.player-title {
+      .show-infos {
+        display: inline-block;
+        h6 {
+          padding: 4px 8px;
+          margin: 0;
+          display: inline-block;
+          text-transform: uppercase;
+          &.last-categorie {
+            font-size: 14px;
+          }
+          &.show-djs {
+            font-size: 38px;
+          }
+          &.last-title {
+            font-size: 25px;
+            position: relative;
+            white-space: nowrap;
+            @media screen and (max-width: 1590px) {
+              white-space: normal;
+            }
+          }
+          &.show-date {
+            font-weight: normal;
+            font-size: 15px;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+    .player-container {
+        .background-player {
+            padding: 0 20px 18px 132px;
+            min-width: 100%;
+            @media screen and (max-width: 1580px) {
+                padding: 0px;
+                position: inherit;
+                padding: 2%;
+            }
+            .transport-play {
+                display: inline-block;
+                background-color: @black;
+                padding: 11px 12px 11px 14px;
+                margin-right: 10px;
+                vertical-align: middle;
+                border: solid 5px @white;
+                .border-radiuses(50px, 50px, 50px, 50px);
+                &:hover {
+                    cursor: pointer;
+                    background-color: @pink;
+                }
+                i {
+                    font-size: 25px;
+                }
+            }
+            #waveform {
+                width: 87%;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+    .list-container {
+        margin: 0px;
+        padding-bottom: 15px;
+        text-align: left;
+        .single-list {
+        	padding: 5px;
+        	position: relative;
+            &:nth-of-type(odd) {
+                background-color: fade(@grey, 12%);
+            }
+            a {
+                &:hover {
+                    li {
+                        color: @white;
+                        background-color: @blue;
+                        .transition(all, 0.2s, ease);
+                        &.playlist-number {
+                            background-color: @black;
+                            color: @white;
+                        }
+                        &.playlist-title {
+                            background-color: transparent;
+                            color: @blue;
+                        }
+                    }
+                }
+                li {
+                    display: inline-block;
+                    padding: 3px 9px;
+                    text-transform: uppercase;
+                    margin: -1px;
+                    &.playlist-number, &.playlist-artist {
+                        font-size: 13px;
+                    }
+                    &.playlist-timing {
+                        font-size: 11px;
+                        padding-top: 5px;
+                        padding-bottom: 4px;
+                        vertical-align: middle;
+                    }
+                    &.playlist-title {
+                        display: block;
+                        padding-left: 0px;
+                        text-transform: lowercase;
+                        font-size: 12px;
+                        position: absolute;
+                        right: 0px;
+                        top: 6px;
+                    }
+                }
+            }
+        }
+    }
+}

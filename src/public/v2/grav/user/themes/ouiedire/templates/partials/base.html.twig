@@ -32,14 +32,14 @@
 					<div class="visual" style="background-image: url('{{ url('theme://images/placeholder_cover.png') }}');">
 						<a href="#"></a>
 						<div class="show-infos">
-								<h6 class="white background-black last-categorie">
-									<a href="#"></a>
-									{{ latest_show.header.collection|capitalize }} {{ latest_show.header.number }}
-								</h6><br>
-								<h6 class="black background-white show-djs">
-									{{ latest_show.taxonomy.dj|join(', ') }}
-									<a href='#'></a>
-								</h6>
+							<h6 class="white background-black last-categorie">
+								<a href="#"></a>
+								{{ latest_show.header.collection|capitalize }} {{ latest_show.header.number }}
+							</h6><br>
+							<h6 class="black background-white show-djs">
+								{{ latest_show.taxonomy.dj|join(', ') }}
+								<a href='#'></a>
+							</h6>
 							<br>
 							<h6 class="white background-pink last-title">
 								{{ latest_show.title }}
@@ -58,7 +58,7 @@
 					</p>
 					<ul class="counters row">
 						<li class="col-sm-4">
-							<a href="#">
+							<a href="./all_artists.html">
 								<p class="blue">{{ taxonomy.getTaxonomyItemKeys('artist')|count }}</p>
 								<h6>artistes</h6>
 							</a>
@@ -111,18 +111,17 @@
 					</h6>
 {% block player %}
 					<div class="background-player">
-						<audio controls class="player">
-							<source src="./media/audio/Beat001.wav" type="audio/wav">
-							Your browser does not support the audio element.
-						</audio>
-
+						<div class="transport-play">
+							<i class="fas fa-play white"></i>
+						</div>
+						<div id="waveform" data-src="./media/audio/Beat001.wav"></div>
 						<ul class="last-artists">
-					{% for artist in latest_show.taxonomy.artist %}
+    {% for artist in latest_show.taxonomy.artist %}
 							<li class="last-artist white background-black white">
 								<a href="#"></a>
 								{{ artist }}
 							</li>
-					{% endfor %}
+    {% endfor %}
 						</ul>
 					</div>
 {% endblock %}
@@ -165,7 +164,7 @@
                         <a href="http://www.musiques-incongrues.net/forum/shows/ouiedire/" target="_blank">forum</a>
                     </li>
                     <li class="col-sm-4">
-                        <a href="mailto:contact@ouidire.net" target="_blank">contact@ouidire.net</a>
+                        <a href="mailto:contact@ouiedire.net" target="_blank">contact@ouiedire.net</a>
                     </li>
                     <li class="col-sm-2">
                         <a href="https://feeds.feedburner.com/ouiedire" target="_blank" class="fas fa-rss"></a>
@@ -173,9 +172,10 @@
                         <a href="https://twitter.com/OuiedireShow" target="_blank" class="fab fa-twitter"></a>
                     </li>
                 </ul>
-				<p>Le projet <a href="#">Ouïedire</a> est développé par <a href="https://www.helloasso.com/associations/constructions-incongrues" target="_blank">Constructions Incongrues</a> et est hébergé par <a href="http://www.pastis-hosting.net/" target="_blank">Pastis Hosting</a>.</p>
+				<p>Le projet <a href="#">Ouïedire</a> est développé par <a href="http://www.constructions-incongrues.net" target="_blank">Constructions Incongrues</a> et est hébergé par <a href="http://www.pastis-hosting.net/" target="_blank">Pastis Hosting</a>.</p>
                 <p>Le logo a été réalisé par <a href="#" target="_blank">Otro</a>. Le code source est <a href="https://github.com/constructions-incongrues/net.ouiedire.www" target="_blank">distribué</a> sous licence <a href="https://www.gnu.org/licenses/agpl.html" target="_blank">AGPL3</a>.</p>
             </div>
         </div>
     </footer>
 </body>
+</html>

@@ -38,6 +38,69 @@
             height: 100%;
         }
     }
+    .slogan {
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: 5px;
+        margin-bottom: 0px;
+        position: relative;
+        font-size: 14px;
+        min-height: 24px;
+        .slogan-pagination-text {
+            @media screen and (max-width: 700px) {
+                display: none;
+            }
+        }
+        a {
+            position: absolute;
+            top: 0;
+            color: @white;
+            &:hover {
+                .transition(all, 0.2s, ease);
+                span {
+                    color: @blue;
+                    &.fas {
+                        color: @black;
+                        background-color: @blue;
+                    }
+                }
+            }
+            &.previous {
+                padding-left: 85px;
+                left: 0;
+                @media screen and (max-width: 1580px) {
+                    padding-left: 0px;
+                }
+            }
+            &.next {
+                right: 0;
+            }
+            span {
+                text-transform: uppercase;
+                font-size: 11px;
+                vertical-align: middle;
+                &.fas {
+                    font-size: 19px;
+                    padding: 2px 8px 3px 8px;
+                }
+            }
+        }
+    }
+    .slogan-container {
+      height: auto;
+      margin-bottom: 40px;
+      position: relative;
+      left: -15px;
+      z-index: 1;
+      @media screen and (max-width: 1580px) {
+        z-index: 3;
+        left: 0px;
+        top: 150px;
+      }
+      @media screen and (max-width: 991px) {
+        top: 20px;
+      }
+    }
     .player-container {
         height: 353px;
         margin-bottom: 40px;
@@ -52,68 +115,48 @@
         @media screen and (max-width: 575px) {
             top: 20px;
         }
-        .slogan {
-            text-align: center;
-            text-transform: uppercase;
-            padding-top: 5px;
-            margin-bottom: 0px;
-            position: relative;
-            font-size: 14px;
-            height: 24px;
-            .slogan-pagination-text {
-                @media screen and (max-width: 700px) {
-                    display: none;
-                }
-            }
-            a {
-                position: absolute;
-                top: 0;
-                color: @white;
-                &:hover {
-                    .transition(all, 0.2s, ease);
-                    span {
-                        color: @blue;
-                        &.fas {
-                            color: @black;
-                            background-color: @blue;
-                        }
-                    }
-                }
-                &.previous {
-                    padding-left: 85px;
-                    left: 0;
-                    @media screen and (max-width: 1580px) {
-                        padding-left: 0px;
-                    }
-                }
-                &.next {
-                    right: 0;
-                }
-                span {
-                    text-transform: uppercase;
-                    font-size: 11px;
-                    vertical-align: middle;
-                    &.fas {
-                        font-size: 19px;
-                        padding: 2px 8px 3px 8px;
-                    }
-                }
-            }
-        }
         .background-player {
             right: 0;
             bottom: 0;
             position: absolute;
-            padding: 0 20px 18px 144px;
+            padding: 0 20px 18px 132px;
+            min-width: 100%;
             @media screen and (max-width: 1580px) {
                 padding: 0px;
                 position: inherit;
-                padding: 10% 10% 10% 10%;
+                padding: 2%;
             }
-            .player {
-                margin-bottom: 20px;
+            .transport-play {
+                display: inline-block;
+                background-color: @black;
+                padding: 18px 18px 18px 20px;
+                margin-right: 10px;
+                vertical-align: middle;
+                border: solid 5px @white;
+                .border-radiuses(50px, 50px, 50px, 50px);
+                &:hover {
+                    cursor: pointer;
+                    background-color: @pink;
+                }
+                @media screen and (max-width: 1074px) {
+                    display: block;
+                    width: 85px;
+                    margin: auto;
+                }
+                i {
+                    font-size: 40px;
+                }
+            }
+            #waveform {
+                width: 87%;
+                display: inline-block;
+                vertical-align: middle;
+                @media screen and (max-width: 1074px) {
+                    display: none;
+                }
             }
             .last-artists {
+                margin-top: 10px;
                 .last-artist {
                     display: inline-block;
                     padding: 3px 10px 2px 10px;
@@ -191,7 +234,9 @@
                     }
                     &.playlist-timing {
                         font-size: 11px;
-                        padding-top: 6px;
+                        padding-top: 5px;
+                        padding-bottom: 4px;
+                        vertical-align: middle;
                     }
                     &.playlist-title {
                         display: block;
