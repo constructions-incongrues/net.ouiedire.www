@@ -1,5 +1,117 @@
 {% extends 'partials/base.html.twig' %}
 
-{% block player_infos %}{% endblock %}
-{% block player %}{% endblock %}
-{% block content %}{% endblock %}
+{% block player_infos %}
+<figure>
+    <div class="visual" style="background-image: url('{{ page.media.images|first.url }}');">
+        <a href="{{ page.url }}"></a>
+        <div class="show-infos">
+            <h6 class="white background-black last-categorie">
+                <a href="{{ page.url }}"></a>
+                {{ page.header.collection|capitalize }} {{ page.header.number }}
+            </h6><br>
+            <h6 class="black background-white show-djs">
+                {{ page.taxonomy.dj|join(', ') }}
+                <a href='{{ page.url }}'></a>
+            </h6>
+            <br>
+            <h6 class="white background-pink last-title">
+                {{ page.title }}
+                <a href="{{ page.url }}"></a>
+            </h6>
+            <h6 class="white background-pink show-date">{{ page.header.release_date }}</h6>
+        </div>
+    </div>
+</figure>
+{% endblock %}
+
+{% block player %}
+<div class="background-player">
+    <div class="transport-play">
+        <i class="fas fa-play white"></i>
+    </div>
+    <div id="waveform" data-src="./media/audio/Beat001.wav"></div>
+    <ul class="last-artists">
+    {% for artist in page.taxonomy.artist %}
+        <li class="last-artist white background-black white">
+            <a href="/?artist={{ artist|urlencode }}"></a>
+            {{ artist }}
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+
+{% set dj_shows = page.collection({ items: {'@taxonomy.dj': page.taxonomy.dj }, 'order': {'by': 'header.release_date', 'dir': 'desc'} }) %}
+
+{% block sidebar_left %}
+<div class="share-download-container">
+    <div class="download background-white">
+        <span class="fas fa-download"></span>
+        <a href="#" class="black">télécharger</a>
+    </div>
+    <div class="share background-white">
+        <span class="fas fa-share-square"></span>
+        <a href="#" class="black">partager</a>
+    </div>
+</div>
+<div class="description">
+    <p>{{ page.header.presentation|markdown }}</p>
+</div>
+<ul>
+    {% for show in dj_shows %}
+    <li class="side-list">
+        <h6 class="show-number background-white">
+            {{ show.header.number }}
+            <a href='#' class="black"></a>
+        </h6>
+        <figure class="show-visual-container">
+            <div class="show-visual" style="background-image: url('{{ show.media.images|first.url }}');">
+                <a href='#'></a>
+            </div>
+        </figure>
+        <div class="djs-title-container">
+            <div class="djs-container">
+                <h6 class="djs background-white">
+        {% for dj in show.taxonomy.dj %}
+                    {{ dj }}
+                    <a href='/?dj={{ dj|urlencode }}'></a>
+        {% endfor %}
+                </h6>
+            </div>
+            <h6 class='title background-white blue'>
+                {{ show.title|truncate(18) }}
+                <a href='{{ show.url }}' title="{{ show.title }}"></a>
+            </h6>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block content %}
+<ul class="list-container row"><!--Playlist-->
+    {% for playlist in page.header.playlists %}
+    {{  playlist.title }}
+        {% for track in playlist.tracks %}
+    <li class="main-list single-list col-md-12 col-lg-6">
+        <a href="#" class="black">
+            <ul>
+                <li class="playlist-number background-white black">
+                    {{ loop.index }}
+                </li>
+                <li class="playlist-timing background-white black">
+                    {{ track.timecode }}
+                </li>
+                <li class="playlist-artist background-white black">
+                    {{ track.artists|join(',') }}
+                </li>
+                <li class="playlist-title">
+                    {{ track.title }}
+                </li>
+            </ul>
+        </a>
+    </li>
+        {% endfor %}
+    {% endfor %}
+</ul>
+{% endblock %}

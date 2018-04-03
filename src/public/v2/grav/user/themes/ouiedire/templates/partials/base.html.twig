@@ -19,7 +19,7 @@
 			<aside class="side col-md-12 col-lg-3">
 				<div class="search-container">
 					<form action="#">
-						<input type="text" placeholder="Recherche.." name="search">
+						<input type="text" placeholder="Recherche..." name="search">
 						<button type="submit"><i class="fas fa-search"></i></button>
 					</form>
 				</div>
@@ -30,20 +30,20 @@
 {% block player_infos %}
 				<figure>
 					<div class="visual" style="background-image: url('{{ url('theme://images/placeholder_cover.png') }}');">
-						<a href="#"></a>
+						<a href="{{ latest_show.url }}"></a>
 						<div class="show-infos">
 							<h6 class="white background-black last-categorie">
-								<a href="#"></a>
+								<a href="{{ latest_show.url }}"></a>
 								{{ latest_show.header.collection|capitalize }} {{ latest_show.header.number }}
 							</h6><br>
 							<h6 class="black background-white show-djs">
 								{{ latest_show.taxonomy.dj|join(', ') }}
-								<a href='#'></a>
+								<a href='{{ latest_show.url }}'></a>
 							</h6>
 							<br>
 							<h6 class="white background-pink last-title">
 								{{ latest_show.title }}
-								<a href="#"></a>
+								<a href="{{ latest_show.url }}"></a>
 							</h6>
 							<h6 class="white background-pink show-date">{{ latest_show.header.release_date }}</h6>
 						</div>
@@ -51,6 +51,7 @@
 				</figure>
 {% endblock %}
 				<div class="side-container">
+{% block sidebar_left %}
 					<p class="list-description">
 						Des copains, des artistes, des fêtards, des autistes, des labels c'est <strong>Ouïedire!</strong>
 						Des collages à en perdre les oreilles, des mixes en pagaille, absurdes ou panachés, différents univers se croisent dans Ouïedire.
@@ -99,6 +100,7 @@
 						<span class="fas fa-plus"></span>
 						<a class="black all-flyers" href="./all_flyers.html">voir tous les flyers</a>
 					</div>
+{% endblock %}
 				</div>
 			</aside>
 			<section class="main col-md-12 col-lg-9">
@@ -118,7 +120,7 @@
 						<ul class="last-artists">
     {% for artist in latest_show.taxonomy.artist %}
 							<li class="last-artist white background-black white">
-								<a href="#"></a>
+								<a href="/?artist={{ artist|urlencode }}"></a>
 								{{ artist }}
 							</li>
     {% endfor %}

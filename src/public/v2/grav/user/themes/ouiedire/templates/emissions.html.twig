@@ -1,30 +1,30 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set latest_show = page.collection.current() %}
-
 {% block content %}
 <ul class="list-container row"><!--all shows list-->
 {% for show in page.collection %}
     <li class="main-list col-sm-6">
         <h6 class="show-number background-white">
             {{ show.header.number }}
-            <a href='./single.html' class="black"></a>
+            <a href="{{ show.url }}" class="black"></a>
         </h6>
         <figure class="show-visual-container">
-            <div class="show-visual" style="background-image: url('{{ url('theme://images/placeholder_cover.png') }}');">
-                <a href='./single.html'></a>
+            <div class="show-visual" style="background-image: url('{{ show.media.images|first.resize(53, 53).url }}');">
+                <a href="{{ show.url }}"></a>
             </div>
         </figure>
         <div class="djs-title-container">
             <div class="djs-container">
                 <h6 class="djs background-white">
-                    {{ show.taxonomy.dj|join(', ') }}
-                    <a href='./single.html'></a>
+    {% for dj in show.taxonomy.dj %}
+                    {{ dj }}
+                    <a href="/?dj={{ dj|urlencode }}"></a>
+    {% endfor %}
                 </h6>
             </div>
             <h6 class='title background-white pink'>
                 {{ show.title }}
-                <a href='./single.html'></a>
+                <a href="{{ show.url }}"></a>
             </h6>
         </div>
     </li>
