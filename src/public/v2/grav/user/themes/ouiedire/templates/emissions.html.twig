@@ -9,7 +9,8 @@
             <a href="{{ show.url }}" class="black"></a>
         </h6>
         <figure class="show-visual-container">
-            <div class="show-visual" style="background-image: url('{{ show.media.images|first.resize(53, 53).url }}');">
+            {# Gregwar<div class="show-visual" style="background-image: url('{{ show.media.images|first.resize(53, 53).url }}');"> #}
+            <div class="show-visual" style="">
                 <a href="{{ show.url }}"></a>
             </div>
         </figure>

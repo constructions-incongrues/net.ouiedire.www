@@ -1,6 +1,8 @@
 .PHONY: configure install start
 
-# Règles obligatoires
+install:
+	./composer.phar install
+	$(MAKE) -C src/public/v2/grav install
 
 configure: install
 	# Configure app
