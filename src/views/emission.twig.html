@@ -58,6 +58,14 @@
 		    <h3 class="showDownload hide-on-mobile"><a href="{{ show.urlDownload }}" title="Télécharger l'émission au format MP3 ({{ show.sizeDownload }})"><i class="icon-download" style="color:#{% if app.request.cookies.get('night') %}555{% else %}fff{% endif %}"></i></a></h3>
 		    <h3 class="showDate hide-on-mobile">{{ show.releasedAt|date('d/m/Y') }}</h3>
 		</div> 
+		<div>
+			<div id="waveform">
+				<!-- <progress id="progress" class="progress"  max="100"></progress> -->
+			</div>
+			<div id="waveform-timeline"></div>
+			<button onclick="wavesurfer.playPause()">Play / Pause</button>
+		</div>
+		<br><br>
 	</div> 
 	<div class="grid-50 mobile-grid-100">
 	    <audio controls="controls">
@@ -109,7 +117,7 @@
 	
 	<!-- Player state -->
 	<script>
-		{%- if player.play -%}
+		/*{%- if player.play -%}
 		window.MejsAutoplay = true;
 		{% else %}
 		window.play = false;
@@ -120,13 +128,93 @@
 		{% else %}
 		window.MejsSmartplaylistPosition = false;
 		{% endif %}
-		window.MejsOuiedireDownloadUrl = '{{ show.urlDownload }}';
+		window.MejsOuiedireDownloadUrl = '{{ show.urlDownload }}';*/
 	</script>
 {% endblock %}
 
 {% block userscript %}
+<!-- <script type="module" src="{{ app.request.getBasePath() }}/vendor/wavesurfer.js/src/wavesurfer.js?{{ app.assetsVersion }}"></script> -->
+<script  src="https://unpkg.com/wavesurfer.js"></script>
+<script  src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.cursor.min.js"></script>
+<script  src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.timeline.min.js"></script>
+
 	<script>
+	var wavesurfer = WaveSurfer.create({
+	    container: '#waveform',
+	    waveColor: '#666666',
+	    //backgroundColor: '#E6FAFF',
+	    backgroundColor: '#FCFE04',
+	    progressColor: '#000000',
+    	/*barWidth: 2,
+    	barHeight: 1,
+    	barGap: 2,*/
+    	plugins: [
+	        WaveSurfer.cursor.create({
+	            showTime: true,
+	            opacity: 1,
+	            customShowTimeStyle: {
+	                'background-color': '#000000',
+	                color: '#FCFE04',
+	                padding: '4px',
+	                'font-size': '10px'
+	            },
+	            style: {
+	                position: 'relative'
+	            }
+	        }),	        
+            WaveSurfer.timeline.create({
+                container: '#waveform-timeline',  
+			    primaryColor: '#000000',
+			    secondaryColor: '#000000',
+			    primaryFontColor: '#000000',
+			    secondaryFontColor: '#000000'
+            })
+	    ]
+	});
+	wavesurfer.load('{{ show.urlDownload }}');
+
+	// ========= Start playing after song is loaded
+	wavesurfer.on("ready", function () {
+	    if(!wavesurfer.loaded) {
+	        wavesurfer.loaded = true;
+	        wavesurfer.play();
+	    }
+	});
+	// ========= Loading bar
+	/*wavesurfer.on('loading', function (percents) {
+		document.getElementById('progress').value = percents;
+	});  
+	wavesurfer.on('ready', function (percents) {
+		document.getElementById('progress').style.display = 'none';
+	});   */   
+	// ========= Play on seek
+	wavesurfer.on('seek', function (progress) {
+		var trackDuration = wavesurfer.getDuration('{{ show.urlDownload }}');
+		wavesurfer.play(progress*trackDuration);
+	});   
+	// ========= Make it responsive
+	var responsiveWave = wavesurfer.util.debounce(function() {
+	  wavesurfer.drawBuffer();
+	}, 150);
+	window.addEventListener('resize', responsiveWave);	
+
+
 	$(document).ready(function() {
+		$(".mejs-smartplaylist-time").on("click", function() {
+			var timestamp = $(".mejs-smartplaylist-current").text().trim();
+			 var factors = { 
+		      1: 60 * 60, // Hours
+		      2: 60,      // Minutes
+		      3: 1        // Seconds
+		    }
+			// Convert to seconds
+	        var seconds = 0;
+	        var parts = timestamp.match(new RegExp('(\\d{2}):(\\d{2}):(\\d{2})'));
+	        seconds += parseInt(parts[1]) * factors['1'];
+	        seconds += parseInt(parts[2]) * factors['2'];
+	        seconds += parseInt(parts[3]) * factors['3'];	        
+			wavesurfer.play(seconds);
+		});
 		$(".mejs-smartplaylist-time").on("click", function() {
 			$('#playerStatus').stop().fadeOut().hide();
 			setTimeout(
